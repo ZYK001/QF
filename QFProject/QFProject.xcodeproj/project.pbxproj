@@ -57,7 +57,7 @@
 		B4FFE50F1C0B64E800DD5E91 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FFE4EF1C0B64E800DD5E91 /* zbar-helpicons.png */; };
 		B4FFE5101C0B64E800DD5E91 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FFE4F01C0B64E800DD5E91 /* zbar-samples.png */; };
 		B4FFE5111C0B64E800DD5E91 /* ZBarSDK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FFE4F11C0B64E800DD5E91 /* ZBarSDK.png */; };
-		B4FFE5121C0B64E800DD5E91 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE4F41C0B64E800DD5E91 /* DDMenuController.m */; };
+		B4FFE5161C0B6BB400DD5E91 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE5151C0B6BB400DD5E91 /* DDMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,8 +168,8 @@
 		B4FFE4EF1C0B64E800DD5E91 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		B4FFE4F01C0B64E800DD5E91 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		B4FFE4F11C0B64E800DD5E91 /* ZBarSDK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZBarSDK.png; sourceTree = "<group>"; };
-		B4FFE4F31C0B64E800DD5E91 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
-		B4FFE4F41C0B64E800DD5E91 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		B4FFE5141C0B6BB400DD5E91 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		B4FFE5151C0B6BB400DD5E91 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		BBACD7B1CEA795042BD7C322 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,6 +302,7 @@
 		B4FFE4A21C0B64E800DD5E91 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B4FFE5131C0B6BB400DD5E91 /* 侧滑抽屉效果 */,
 				B4FFE4A31C0B64E800DD5E91 /* AFResumeDownload */,
 				B4FFE4BB1C0B64E800DD5E91 /* lib */,
 				B4FFE4BE1C0B64E800DD5E91 /* libqrencode */,
@@ -309,7 +310,6 @@
 				B4FFE4D01C0B64E800DD5E91 /* Reachability */,
 				B4FFE4D31C0B64E800DD5E91 /* ZBarSDK */,
 				B4FFE4F11C0B64E800DD5E91 /* ZBarSDK.png */,
-				B4FFE4F21C0B64E800DD5E91 /* 侧滑&抽屉效果 */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -449,13 +449,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B4FFE4F21C0B64E800DD5E91 /* 侧滑&抽屉效果 */ = {
+		B4FFE5131C0B6BB400DD5E91 /* 侧滑抽屉效果 */ = {
 			isa = PBXGroup;
 			children = (
-				B4FFE4F31C0B64E800DD5E91 /* DDMenuController.h */,
-				B4FFE4F41C0B64E800DD5E91 /* DDMenuController.m */,
+				B4FFE5141C0B6BB400DD5E91 /* DDMenuController.h */,
+				B4FFE5151C0B6BB400DD5E91 /* DDMenuController.m */,
 			);
-			path = "侧滑&抽屉效果";
+			path = "侧滑抽屉效果";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,7 +628,7 @@
 				B4FFE5051C0B64E800DD5E91 /* qrencode.c in Sources */,
 				B4FFE4FC1C0B64E800DD5E91 /* AFURLConnectionOperation.m in Sources */,
 				B4FFE4FD1C0B64E800DD5E91 /* AFXMLRequestOperation.m in Sources */,
-				B4FFE5121C0B64E800DD5E91 /* DDMenuController.m in Sources */,
+				B4FFE5161C0B6BB400DD5E91 /* DDMenuController.m in Sources */,
 				B4FFE5091C0B64E800DD5E91 /* split.c in Sources */,
 				B4FFE4FF1C0B64E800DD5E91 /* README.md in Sources */,
 				B4FFE50B1C0B64E800DD5E91 /* Reachability.m in Sources */,
