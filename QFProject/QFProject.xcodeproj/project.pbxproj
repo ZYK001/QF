@@ -57,6 +57,7 @@
 		B4FFE4991C0B4D7D00DD5E91 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FFE4981C0B4D7D00DD5E91 /* CoreFoundation.framework */; };
 		B4FFE49B1C0B4D8400DD5E91 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FFE49A1C0B4D8400DD5E91 /* CFNetwork.framework */; };
 		B4FFE49D1C0B4DFD00DD5E91 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FFE49C1C0B4DFD00DD5E91 /* PushConfig.plist */; };
+		B4FFE4A11C0B536D00DD5E91 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FFE4A01C0B536D00DD5E91 /* DDMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,8 @@
 		B4FFE4981C0B4D7D00DD5E91 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		B4FFE49A1C0B4D8400DD5E91 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B4FFE49C1C0B4DFD00DD5E91 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		B4FFE49F1C0B536D00DD5E91 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		B4FFE4A01C0B536D00DD5E91 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		BBACD7B1CEA795042BD7C322 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +242,7 @@
 		B42637B01C06739400D1CDCD = {
 			isa = PBXGroup;
 			children = (
-				B4FFE40C1C0AABB300DD5E91 /* ThirdPart */,
+				B4FFE40C1C0AABB300DD5E91 /* Libraries */,
 				B42637BB1C06739400D1CDCD /* QFProject */,
 				B42637D51C06739400D1CDCD /* QFProjectTests */,
 				B42637BA1C06739400D1CDCD /* Products */,
@@ -296,14 +299,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B4FFE40C1C0AABB300DD5E91 /* ThirdPart */ = {
+		B4FFE40C1C0AABB300DD5E91 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B4FFE49E1C0B536D00DD5E91 /* 侧滑抽屉 */,
 				B4FFE4781C0B3D5C00DD5E91 /* 网络状态检查 */,
 				B4FFE4371C0B3CFE00DD5E91 /* 二维码 */,
 				B4FFE4361C0B3CEB00DD5E91 /* 极光推送 */,
 				B4FFE4351C0B3CCF00DD5E91 /* 断点续传 */,
 			);
+			name = Libraries;
 			path = ThirdPart;
 			sourceTree = "<group>";
 		};
@@ -477,6 +482,16 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		B4FFE49E1C0B536D00DD5E91 /* 侧滑抽屉 */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFE49F1C0B536D00DD5E91 /* DDMenuController.h */,
+				B4FFE4A01C0B536D00DD5E91 /* DDMenuController.m */,
+			);
+			name = "侧滑抽屉";
+			path = "侧滑&抽屉效果";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -647,6 +662,7 @@
 				B4FFE46C1C0B3D2800DD5E91 /* qrencode.c in Sources */,
 				B4FFE4301C0AAD0700DD5E91 /* AFURLConnectionOperation.m in Sources */,
 				B4FFE4311C0AAD0700DD5E91 /* AFXMLRequestOperation.m in Sources */,
+				B4FFE4A11C0B536D00DD5E91 /* DDMenuController.m in Sources */,
 				B4FFE4701C0B3D2800DD5E91 /* split.c in Sources */,
 				B4FFE4331C0AAD0700DD5E91 /* README.md in Sources */,
 				B4FFE47F1C0B43F900DD5E91 /* Reachability.m in Sources */,
