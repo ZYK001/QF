@@ -13,6 +13,10 @@
 		B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42637C91C06739400D1CDCD /* Images.xcassets */; };
 		B42637CD1C06739400D1CDCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42637CB1C06739400D1CDCD /* LaunchScreen.xib */; };
 		B42637D91C06739400D1CDCD /* QFProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637D81C06739400D1CDCD /* QFProjectTests.m */; };
+		B496D27E1C0C1CEC0081D31A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496D27D1C0C1CEC0081D31A /* MainViewController.m */; };
+		B496D2811C0C1CFE0081D31A /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = B496D2801C0C1CFE0081D31A /* MainView.m */; };
+		B496D2841C0C47E40081D31A /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496D2831C0C47E40081D31A /* LeftViewController.m */; };
+		B496D2871C0C47F90081D31A /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = B496D2861C0C47F90081D31A /* LeftView.m */; };
 		B4FFE4811C0B4C7B00DD5E91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FFE4801C0B4C7B00DD5E91 /* CoreGraphics.framework */; };
 		B4FFE4831C0B4C8200DD5E91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FFE4821C0B4C8200DD5E91 /* Foundation.framework */; };
 		B4FFE4851C0B4C8600DD5E91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FFE4841C0B4C8600DD5E91 /* UIKit.framework */; };
@@ -81,6 +85,14 @@
 		B42637D21C06739400D1CDCD /* QFProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QFProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42637D71C06739400D1CDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42637D81C06739400D1CDCD /* QFProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFProjectTests.m; sourceTree = "<group>"; };
+		B496D27C1C0C1CEC0081D31A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B496D27D1C0C1CEC0081D31A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B496D27F1C0C1CFE0081D31A /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		B496D2801C0C1CFE0081D31A /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		B496D2821C0C47E40081D31A /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		B496D2831C0C47E40081D31A /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		B496D2851C0C47F90081D31A /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
+		B496D2861C0C47F90081D31A /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftView.m; sourceTree = "<group>"; };
 		B4FFE4801C0B4C7B00DD5E91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B4FFE4821C0B4C8200DD5E91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4FFE4841C0B4C8600DD5E91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -259,6 +271,7 @@
 		B42637BB1C06739400D1CDCD /* QFProject */ = {
 			isa = PBXGroup;
 			children = (
+				B496D2781C0C19060081D31A /* 首页面 */,
 				B42637C01C06739400D1CDCD /* AppDelegate.h */,
 				B42637C11C06739400D1CDCD /* AppDelegate.m */,
 				B42637C91C06739400D1CDCD /* Images.xcassets */,
@@ -293,6 +306,45 @@
 				B42637D71C06739400D1CDCD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B496D2781C0C19060081D31A /* 首页面 */ = {
+			isa = PBXGroup;
+			children = (
+				B496D27B1C0C198A0081D31A /* C */,
+				B496D27A1C0C19860081D31A /* V */,
+				B496D2791C0C197C0081D31A /* M */,
+			);
+			path = "首页面";
+			sourceTree = "<group>";
+		};
+		B496D2791C0C197C0081D31A /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		B496D27A1C0C19860081D31A /* V */ = {
+			isa = PBXGroup;
+			children = (
+				B496D27F1C0C1CFE0081D31A /* MainView.h */,
+				B496D2801C0C1CFE0081D31A /* MainView.m */,
+				B496D2851C0C47F90081D31A /* LeftView.h */,
+				B496D2861C0C47F90081D31A /* LeftView.m */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		B496D27B1C0C198A0081D31A /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B496D27C1C0C1CEC0081D31A /* MainViewController.h */,
+				B496D27D1C0C1CEC0081D31A /* MainViewController.m */,
+				B496D2821C0C47E40081D31A /* LeftViewController.h */,
+				B496D2831C0C47E40081D31A /* LeftViewController.m */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 		B4F1039D1C0BE299008E3728 /* 断点续传 */ = {
@@ -651,14 +703,18 @@
 				B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */,
 				B4FFE5051C0B64E800DD5E91 /* qrencode.c in Sources */,
 				B4FFE4FC1C0B64E800DD5E91 /* AFURLConnectionOperation.m in Sources */,
+				B496D2841C0C47E40081D31A /* LeftViewController.m in Sources */,
 				B4FFE4FD1C0B64E800DD5E91 /* AFXMLRequestOperation.m in Sources */,
 				B4FFE5161C0B6BB400DD5E91 /* DDMenuController.m in Sources */,
+				B496D2871C0C47F90081D31A /* LeftView.m in Sources */,
 				B4FFE5091C0B64E800DD5E91 /* split.c in Sources */,
 				B4FFE4FF1C0B64E800DD5E91 /* README.md in Sources */,
 				B4FFE50B1C0B64E800DD5E91 /* Reachability.m in Sources */,
 				B4FFE5081C0B64E800DD5E91 /* rscode.c in Sources */,
 				B4FFE4F91C0B64E800DD5E91 /* AFJSONRequestOperation.m in Sources */,
 				B4FFE4FA1C0B64E800DD5E91 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				B496D27E1C0C1CEC0081D31A /* MainViewController.m in Sources */,
+				B496D2811C0C1CFE0081D31A /* MainView.m in Sources */,
 				B4FFE4F71C0B64E800DD5E91 /* AFHTTPRequestOperation.m in Sources */,
 				B4FFE5071C0B64E800DD5E91 /* qrspec.c in Sources */,
 				B42637BF1C06739400D1CDCD /* main.m in Sources */,
@@ -803,7 +859,7 @@
 					"$(SRCROOT)/Libraries/lib",
 				);
 				INFOPLIST_FILE = QFProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -840,7 +896,7 @@
 					"$(SRCROOT)/Libraries/lib",
 				);
 				INFOPLIST_FILE = QFProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

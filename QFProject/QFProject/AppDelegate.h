@@ -9,11 +9,17 @@
 
 
 #import <UIKit/UIKit.h>
-
+#import "DDMenuController.h"
+#import "MainViewController.h"
+#import "LeftViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property(strong,nonatomic)UINavigationController *rootNavigationController;
+@property(strong,nonatomic)DDMenuController *menuController;
+@property(strong,nonatomic)LeftViewController *leftController;
+@property(strong,nonatomic)MainViewController *mainController;
 
 @end
 
