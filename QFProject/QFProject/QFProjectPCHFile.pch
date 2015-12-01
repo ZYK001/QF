@@ -1,0 +1,18 @@
+//
+//  QFProjectPCHFile.pch
+//  QFProject
+//
+//  Created by 赵英奎 on 15/12/1.
+//  Copyright © 2015年 赵英奎. All rights reserved.
+//
+
+#ifndef QFProjectPCHFile_pch
+#define QFProjectPCHFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define  SHEIGHT [UIScreen mainScreen].bounds.size.height
+#define SWEIDTH [UIScreen mainScreen].bounds.size.width
+
+#endif /* QFProjectPCHFile_pch */

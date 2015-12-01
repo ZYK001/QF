@@ -1,22 +1,25 @@
 //
-//  LeftViewController.m
+//  MainViewController.m
 //  QFProject
 //
 //  Created by 赵英奎 on 15/11/30.
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
-#import "LeftViewController.h"
+#import "MainViewController.h"
 
-@interface LeftViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation LeftViewController
+@implementation MainViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {

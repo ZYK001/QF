@@ -1,5 +1,5 @@
 //
-//  LeftViewController.h
+//  MainViewController.h
 //  QFProject
 //
 //  Created by 赵英奎 on 15/11/30.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LeftViewController : UIViewController
+#import "BaseViewController.h"
+@interface MainViewController : BaseViewController
 
 @end

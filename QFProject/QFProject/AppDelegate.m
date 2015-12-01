@@ -31,9 +31,9 @@
     self.mainController=[[MainViewController alloc]init];
     self.leftController=[[LeftViewController alloc]init];
     self.menuController=[[DDMenuController alloc]initWithRootViewController:self.mainController];
-    [self.menuController setLeftViewController:self.leftController];
+    self.menuController.leftViewController=self.leftController;
     self.rootNavigationController=[[UINavigationController alloc]initWithRootViewController:self.menuController];
-    
+   
     self.window.rootViewController=self.rootNavigationController;
     [self.window makeKeyAndVisible];
     

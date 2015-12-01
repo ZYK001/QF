@@ -1,24 +1,33 @@
 //
-//  MainViewController.m
+//  LeftViewController.m
 //  QFProject
 //
 //  Created by 赵英奎 on 15/11/30.
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
-#import "MainViewController.h"
-
-@interface MainViewController ()
+#import "LeftViewController.h"
+#import "LeftViewModel.h"
+#import "LeftView.h"
+@interface LeftViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation LeftViewController
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //创建准备显示的左侧视图View
+    LeftView *leftView=[[LeftView alloc]initWithFrame:self.view.frame];
+    //将左侧视图View绑定到侧滑的左侧视图控制器中
+    [self bindViewOnCurrentController:self andBindView:leftView];
+    //设置左侧视图将要显示的数据元数据
+    [self reciveDataSourceInOrderViewDisplay:[LeftViewModel dataSourceArray] andView:leftView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
