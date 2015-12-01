@@ -7,6 +7,9 @@
 //
 
 #import "BaseModel.h"
+#import "AppDelegate.h"
+#import "DDMenuController.h"
+#import "MainViewController.h"
 
 @implementation BaseModel
 
@@ -28,6 +31,16 @@
     cell.textLabel.text=[[self dataSourceArray]objectAtIndex:indexPath.row];
     return cell;
     
+}
+
+//当点击表格时调用
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIApplication *app=[UIApplication sharedApplication];
+    AppDelegate *delegate=app.delegate;
+    DDMenuController *menuController=delegate.menuController;
+    //当点击表格每行时返回首页面
+    [menuController setRootController:delegate.mainController animated:YES];
 }
 
 

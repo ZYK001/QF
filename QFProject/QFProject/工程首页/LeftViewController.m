@@ -24,7 +24,7 @@
     //设置左侧视图将要显示的数据元数据
     leftViewModel= [[LeftViewModel alloc]init];
     //设置模型中需要使用的数据
-    leftViewModel.dataSourceArray=@[@"1",@"2"];
+    leftViewModel.dataSourceArray=@[@"连接服务",@"OAth2.0Share"];
     //创建准备显示的左侧视图View
     leftViewInDDMenu=[[LeftView alloc]initWithFrame:self.view.frame tableViewDelegate:leftViewModel];
     //将左侧视图View绑定到侧滑的左侧视图控制器中
