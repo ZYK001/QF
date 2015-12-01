@@ -6,10 +6,15 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
+#import "Masonry.h"
 #import <UIKit/UIKit.h>
-@interface BaseView : UIView<UITableViewDelegate,UITableViewDataSource>
+
+@interface BaseView : UIView
+
 //设置将要显示的表格
 @property(strong,nonatomic)UITableView *tableView;
-//设置表格中加载数据的数据元数组
-@property(strong,nonatomic)NSArray *dataSourceArray;
+//通过Masonry设置当前视图的适配
+-(void)setAutoLayOutOnTheViewWithMasonry;
+//当加载该视图时首先将表格视图添加到当前View并设置表格代理
+-(id)initWithFrame:(CGRect)frame tableViewDelegate:(id)obj;
 @end

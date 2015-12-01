@@ -11,6 +11,5 @@
 #import "BaseViewController.h"
 
 @interface LeftViewController : BaseViewController
-//声明在该视图控制器中将要显示的视图
-@property(strong,nonatomic)LeftView *leftView;
+
 @end

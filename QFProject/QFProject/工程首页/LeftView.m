@@ -13,15 +13,36 @@
 
 //通过继承关系，重新写initWithFrame:(CGRect)frame，覆盖父类
 //从新设置左侧滑动视图的表格高度位置
--(id)initWithFrame:(CGRect)frame
+-(id)initWithFrame:(CGRect)frame tableViewDelegate:(id)obj
 {
-    self=[super initWithFrame:frame];
+    self=[super initWithFrame:frame tableViewDelegate:obj];
     if (self) {
         CGRect frame=self.frame;
-        frame.origin.y=64;
+        //以手机的状态栏为标准，判断当前状态的视屏是横评还是竖屏
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        if(orientation==UIInterfaceOrientationLandscapeLeft||orientation==UIInterfaceOrientationLandscapeRight)
+            frame.origin.y=32;
+        else
+            frame.origin.y=64;
         self.tableView.frame=frame;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willAnimateRotationToInterfaceOrientation:) name:@"willAnimateRotationToInterfaceOrientation" object:nil];
     }
     return self;
+}
+//当前视图即将发生横竖屏转动时调用该方法
+-(void)willAnimateRotationToInterfaceOrientation:(NSNotification *)positionString
+{
+    CGRect frame=self.tableView.frame;
+    if ([@"SCREENHORIZENTAL" isEqualToString:positionString.object]) {
+        frame.origin.y=32;
+        
+    }
+    else
+    {
+        frame.origin.y=64;
+    }
+    self.tableView.frame=frame;
 }
 
 @end

@@ -14,5 +14,5 @@
 
 #define  SHEIGHT [UIScreen mainScreen].bounds.size.height
 #define SWEIDTH [UIScreen mainScreen].bounds.size.width
-
+#define SCREENHORIZENTAL NSString
 #endif /* QFProjectPCHFile_pch */

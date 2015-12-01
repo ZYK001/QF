@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface BaseModel : NSObject
-//提供所有模型类中的数据元数据
-+(NSArray *)dataSourceArray;
+@interface BaseModel : NSObject<UITableViewDataSource,UITableViewDelegate>
+//设置表格中加载数据的数据元数组
+@property(strong,nonatomic)NSArray *dataSourceArray;
 @end

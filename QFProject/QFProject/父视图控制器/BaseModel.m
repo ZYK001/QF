@@ -9,9 +9,24 @@
 #import "BaseModel.h"
 
 @implementation BaseModel
-//提供所有模型类中的数据元数据，等待子类中的重写
-+(NSArray *)dataSourceArray
+
+//设置表格需要显示的行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return nil;
+    return [self dataSourceArray].count;
 }
+
+//创建表格中的每个Cell对象
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *strIdentifier=@"cellIdentifier";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:strIdentifier];
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strIdentifier];
+    }
+    cell.textLabel.text=[[self dataSourceArray]objectAtIndex:indexPath.row];
+    return cell;
+    
+}
+
 @end
