@@ -7,15 +7,9 @@
 //
 
 #import "LeftViewController.h"
-#import "LeftViewModel.h"
-#import "LeftView.h"
+
 @interface LeftViewController ()
-{
-    //主页面左侧视图
-    LeftView *leftView;
-    //主页面左侧视图模型
-    LeftViewModel *leftViewModel;
-}
+
 @end
 
 @implementation LeftViewController
@@ -32,9 +26,9 @@
     //设置模型中需要使用的数据
     leftViewModel.dataSourceArray=@[@"1",@"2"];
     //创建准备显示的左侧视图View
-    leftView=[[LeftView alloc]initWithFrame:self.view.frame tableViewDelegate:leftViewModel];
+    leftViewInDDMenu=[[LeftView alloc]initWithFrame:self.view.frame tableViewDelegate:leftViewModel];
     //将左侧视图View绑定到侧滑的左侧视图控制器中
-    [self bindViewOnCurrentController:self withBindView:leftView];
+    [self bindViewOnCurrentController:self withBindView:leftViewInDDMenu];
     
     
     

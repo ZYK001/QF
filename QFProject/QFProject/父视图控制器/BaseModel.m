@@ -10,6 +10,7 @@
 
 @implementation BaseModel
 
+#pragma -mark 处理表格数据业务逻辑
 //设置表格需要显示的行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -28,5 +29,7 @@
     return cell;
     
 }
+
+
 
 @end

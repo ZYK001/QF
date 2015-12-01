@@ -16,7 +16,7 @@
 {
     self=[super initWithFrame:frame];
     if (self) {
-        
+        //创建当前视图中将要显示的表格对象
         self.tableView=[[UITableView alloc]initWithFrame:frame];
         self.tableView.delegate=obj;
         self.tableView.dataSource=obj;
