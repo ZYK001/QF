@@ -27,9 +27,17 @@
 }
 
 //通过Masonry设置当前视图的适配
--(void)setAutoLayOutOnTheViewWithMasonry
+-(void)setAutoLayOutOnTheViewWithMasonry:(UIView*)view supperView:(UIView *)supperView leftMargin:(float)left topMargin:(float)top rightMargin:(float)right bottomMargin:(float)bottom
 {
-    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        //设置相对坐标
+        make.edges.equalTo(supperView.mas_top).offset(top);
+        make.edges.equalTo(supperView.mas_left).offset(left);
+        make.edges.equalTo(supperView.mas_bottom).offset(bottom);
+        make.edges.equalTo(supperView.mas_right).offset(right);
+        
+    }];
 }
 
 //隐藏表格中下方多余的lines

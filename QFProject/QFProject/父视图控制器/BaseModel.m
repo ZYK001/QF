@@ -11,6 +11,7 @@
 #import "DDMenuController.h"
 #import "MainViewController.h"
 #import "AVCaptureDeviceController.h"
+#import "QREncodeViewController.h"
 
 @implementation BaseModel
 
@@ -37,17 +38,27 @@
 //当点击表格时调用
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIApplication *app=[UIApplication sharedApplication];
-    AppDelegate *delegate=app.delegate;
+    
+    AppDelegate *delegate=[self delegateInApplication];
     DDMenuController *menuController=delegate.menuController;
-
+    MainViewController *mainController=delegate.mainController;
+    [self removeAllSubviewFromMainControllerView];
     switch (indexPath.row) {
             //二维码
         case 1:
         {
             AVCaptureDeviceController *captureController=[[AVCaptureDeviceController alloc]init];
-            [menuController setRootController:captureController animated:YES];
+            [mainController.view addSubview:captureController.view];
+            [menuController setRootController:mainController animated:YES];
             break;
+        }
+        case 2:
+        {
+            QREncodeViewController *qrController=[[QREncodeViewController alloc]init];
+            [mainController.view addSubview:qrController.view];
+            [menuController setRootController:qrController animated:YES];
+            break;
+            
         }
             
         default:
@@ -59,6 +70,24 @@
     }
   }
 
+//删除主视图中所有的子视图
+-(void)removeAllSubviewFromMainControllerView
+{
+    AppDelegate *delegate=[self delegateInApplication];
+    MainViewController *mainController=delegate.mainController;
+    UIView *mainView=mainController.view;
+    for (UIView *view in [mainView subviews]) {
+        [view removeFromSuperview];
+    }
+    
+}
 
+//获得应用程序中的代理方
+-(AppDelegate *)delegateInApplication
+{
+    UIApplication *app=[UIApplication sharedApplication];
+    AppDelegate *delegate=app.delegate;
+    return delegate;
+}
 
 @end

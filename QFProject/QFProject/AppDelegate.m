@@ -29,7 +29,7 @@
     self.window.backgroundColor=[UIColor whiteColor];
     
     self.mainController=[[MainViewController alloc]init];
-    self.leftController=[[LeftViewController alloc]init];
+    self.leftController=[[ChildViewController alloc]init];
     self.menuController=[[DDMenuController alloc]initWithRootViewController:self.mainController];
     self.menuController.leftViewController=self.leftController;
     self.rootNavigationController=[[UINavigationController alloc]initWithRootViewController:self.menuController];

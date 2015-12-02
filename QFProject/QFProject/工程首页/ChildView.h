@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseView.h"
-@interface LeftView : BaseView
+@interface ChildView : BaseView
 
 @end
