@@ -28,6 +28,8 @@
         self.tableView.frame=frame;
         //通过通知中心，监听屏幕横纵状态变化
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willAnimateRotationToInterfaceOrientation:) name:@"willAnimateRotationToInterfaceOrientation" object:nil];
+        //调用父类中隐藏多余tableview的行
+        [self hideTableViewBotmlines];
     }
     return self;
 }
@@ -46,5 +48,6 @@
     }
     self.tableView.frame=frame;
 }
+
 
 @end

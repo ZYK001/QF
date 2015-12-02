@@ -17,4 +17,7 @@
 -(void)setAutoLayOutOnTheViewWithMasonry;
 //当加载该视图时首先将表格视图添加到当前View并设置表格代理
 -(id)initWithFrame:(CGRect)frame tableViewDelegate:(id)obj;
+//隐藏表格中下方多余的lines
+-(void)hideTableViewBotmlines;
+
 @end

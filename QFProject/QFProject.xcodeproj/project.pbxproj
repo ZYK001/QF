@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7A9898837C025DEAD0D6A5B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A9222DAB02E979D92664CD /* libPods.a */; };
+		B41150141C0EA062007B564E /* AVCaptureDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41150131C0EA062007B564E /* AVCaptureDeviceController.m */; };
+		B411501A1C0EC420007B564E /* ScanBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41150191C0EC420007B564E /* ScanBoxView.m */; };
+		B411501D1C0EC479007B564E /* AVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = B411501C1C0EC479007B564E /* AVCapture.m */; };
 		B42637BF1C06739400D1CDCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637BE1C06739400D1CDCD /* main.m */; };
 		B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637C11C06739400D1CDCD /* AppDelegate.m */; };
 		B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42637C91C06739400D1CDCD /* Images.xcassets */; };
@@ -79,6 +82,12 @@
 /* Begin PBXFileReference section */
 		65A9222DAB02E979D92664CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E88FD23FB0E742C1E5D9AA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B41150121C0EA062007B564E /* AVCaptureDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCaptureDeviceController.h; sourceTree = "<group>"; };
+		B41150131C0EA062007B564E /* AVCaptureDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCaptureDeviceController.m; sourceTree = "<group>"; };
+		B41150181C0EC420007B564E /* ScanBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBoxView.h; sourceTree = "<group>"; };
+		B41150191C0EC420007B564E /* ScanBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBoxView.m; sourceTree = "<group>"; };
+		B411501B1C0EC479007B564E /* AVCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCapture.h; sourceTree = "<group>"; };
+		B411501C1C0EC479007B564E /* AVCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCapture.m; sourceTree = "<group>"; };
 		B42637B91C06739400D1CDCD /* QFProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42637BD1C06739400D1CDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42637BE1C06739400D1CDCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -260,6 +269,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B41150111C0EA02D007B564E /* 二维码操作 */ = {
+			isa = PBXGroup;
+			children = (
+				B41150171C0EA070007B564E /* C */,
+				B41150161C0EA06A007B564E /* V */,
+				B41150151C0EA066007B564E /* M */,
+			);
+			path = "二维码操作";
+			sourceTree = "<group>";
+		};
+		B41150151C0EA066007B564E /* M */ = {
+			isa = PBXGroup;
+			children = (
+				B411501B1C0EC479007B564E /* AVCapture.h */,
+				B411501C1C0EC479007B564E /* AVCapture.m */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		B41150161C0EA06A007B564E /* V */ = {
+			isa = PBXGroup;
+			children = (
+				B41150181C0EC420007B564E /* ScanBoxView.h */,
+				B41150191C0EC420007B564E /* ScanBoxView.m */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		B41150171C0EA070007B564E /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B41150121C0EA062007B564E /* AVCaptureDeviceController.h */,
+				B41150131C0EA062007B564E /* AVCaptureDeviceController.m */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
 		B42637B01C06739400D1CDCD = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +330,7 @@
 		B42637BB1C06739400D1CDCD /* QFProject */ = {
 			isa = PBXGroup;
 			children = (
+				B41150111C0EA02D007B564E /* 二维码操作 */,
 				B4A8F3D91C0D4BC300222CEF /* 父视图控制器 */,
 				B4A8F3C91C0D4A9900222CEF /* 工程首页 */,
 				B42637C01C06739400D1CDCD /* AppDelegate.h */,
@@ -367,7 +414,6 @@
 		B4A8F3D91C0D4BC300222CEF /* 父视图控制器 */ = {
 			isa = PBXGroup;
 			children = (
-				B4A8F3EA1C0D513C00222CEF /* 类别 */,
 				B4A8F3DC1C0D4BD600222CEF /* C */,
 				B4A8F3DB1C0D4BD200222CEF /* V */,
 				B4A8F3DA1C0D4BCA00222CEF /* M */,
@@ -402,13 +448,6 @@
 			name = C;
 			sourceTree = "<group>";
 		};
-		B4A8F3EA1C0D513C00222CEF /* 类别 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "类别";
-			sourceTree = "<group>";
-		};
 		B4F1039D1C0BE299008E3728 /* 断点续传 */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +476,7 @@
 		B4F103A01C0BE2D5008E3728 /* 判断网络 */ = {
 			isa = PBXGroup;
 			children = (
+				B4F1039F1C0BE2B1008E3728 /* 二维码扫描与生成 */,
 				B4FFE4D01C0B64E800DD5E91 /* Reachability */,
 			);
 			name = "判断网络";
@@ -446,7 +486,6 @@
 			isa = PBXGroup;
 			children = (
 				B4F103A01C0BE2D5008E3728 /* 判断网络 */,
-				B4F1039F1C0BE2B1008E3728 /* 二维码扫描与生成 */,
 				B4F1039E1C0BE2A7008E3728 /* 极光推送 */,
 				B4F1039D1C0BE299008E3728 /* 断点续传 */,
 				B4FFE5131C0B6BB400DD5E91 /* 侧滑抽屉效果 */,
@@ -775,6 +814,7 @@
 				B4FFE5091C0B64E800DD5E91 /* split.c in Sources */,
 				B4A8F3E51C0D4C0400222CEF /* BaseModel.m in Sources */,
 				B4A8F3E21C0D4BF600222CEF /* BaseView.m in Sources */,
+				B41150141C0EA062007B564E /* AVCaptureDeviceController.m in Sources */,
 				B4FFE4FF1C0B64E800DD5E91 /* README.md in Sources */,
 				B4A8F3D31C0D4A9900222CEF /* LeftViewController.m in Sources */,
 				B4FFE50B1C0B64E800DD5E91 /* Reachability.m in Sources */,
@@ -782,7 +822,9 @@
 				B4FFE4F91C0B64E800DD5E91 /* AFJSONRequestOperation.m in Sources */,
 				B4FFE4FA1C0B64E800DD5E91 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				B4FFE4F71C0B64E800DD5E91 /* AFHTTPRequestOperation.m in Sources */,
+				B411501D1C0EC479007B564E /* AVCapture.m in Sources */,
 				B4FFE5071C0B64E800DD5E91 /* qrspec.c in Sources */,
+				B411501A1C0EC420007B564E /* ScanBoxView.m in Sources */,
 				B42637BF1C06739400D1CDCD /* main.m in Sources */,
 				B4FFE4F61C0B64E800DD5E91 /* AFHTTPClient.m in Sources */,
 			);

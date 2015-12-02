@@ -32,4 +32,11 @@
     
 }
 
+//隐藏表格中下方多余的lines
+-(void)hideTableViewBotmlines
+{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectZero];
+    [self.tableView setTableFooterView:view];
+}
+
 @end

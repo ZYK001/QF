@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "DDMenuController.h"
 #import "MainViewController.h"
+#import "AVCaptureDeviceController.h"
 
 @implementation BaseModel
 
@@ -39,9 +40,24 @@
     UIApplication *app=[UIApplication sharedApplication];
     AppDelegate *delegate=app.delegate;
     DDMenuController *menuController=delegate.menuController;
-    //当点击表格每行时返回首页面
-    [menuController setRootController:delegate.mainController animated:YES];
-}
+
+    switch (indexPath.row) {
+            //二维码
+        case 1:
+        {
+            AVCaptureDeviceController *captureController=[[AVCaptureDeviceController alloc]init];
+            [menuController setRootController:captureController animated:YES];
+            break;
+        }
+            
+        default:
+        {
+            //当点击表格每行时返回首页面
+            [menuController setRootController:delegate.mainController animated:YES];
+            break;
+        }
+    }
+  }
 
 
 
