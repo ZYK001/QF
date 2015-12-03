@@ -30,7 +30,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - JSONModel
-  - Masonry
+  - Masonry (~> 0.6.3)
   - MBProgressHUD (~> 0.9.1)
   - SDWebImage (~> 3.7)
 

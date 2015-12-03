@@ -6,11 +6,11 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+
 #import <Foundation/Foundation.h>
 
 
-@interface BaseModel : NSObject<UITableViewDataSource,UITableViewDelegate>
-//设置表格中加载数据的数据元数组
-@property(strong,nonatomic)NSArray *dataSourceArray;
+@interface BaseModel : NSObject
+
 
 @end

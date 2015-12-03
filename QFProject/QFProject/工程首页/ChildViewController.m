@@ -20,13 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    //设置左侧视图将要显示的数据元数据
-    leftViewModel= [[LeftViewModel alloc]init];
     //设置模型中需要使用的数据
-    leftViewModel.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"清除缓存",@"断点续传",@"多表查询",@"本地推送",@"三方分享",@"连接服务",@"OAth2.0Share"];
+    self.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"清除缓存",@"断点续传",@"多表查询",@"本地推送",@"三方分享",@"连接服务",@"OAth2.0Share"];
     //创建准备显示的左侧视图View
-    leftViewInDDMenu=[[ChildView alloc]initWithFrame:self.view.frame tableViewDelegate:leftViewModel];
+    leftViewInDDMenu=[[ChildView alloc]initWithFrame:self.view.frame tableViewDelegate:self];
     //将左侧视图View绑定到侧滑的左侧视图控制器中
     [self bindViewOnCurrentController:self withBindView:leftViewInDDMenu];
     
@@ -49,5 +46,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//设置表格需要显示的行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self dataSourceArray].count;
+}
+
+//创建表格中的每个Cell对象
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *strIdentifier=@"cellIdentifier";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:strIdentifier];
+    if (cell==nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strIdentifier];
+    }
+    cell.textLabel.text=[[self dataSourceArray]objectAtIndex:indexPath.row];
+    return cell;
+    
+}
 
 @end

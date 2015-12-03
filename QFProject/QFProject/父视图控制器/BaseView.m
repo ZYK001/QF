@@ -21,7 +21,6 @@
         self.tableView.delegate=obj;
         self.tableView.dataSource=obj;
         [self addSubview:self.tableView];
-        [self.tableView reloadData];
     }
     return self;
 }

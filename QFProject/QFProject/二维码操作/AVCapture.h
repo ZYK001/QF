@@ -15,4 +15,5 @@
 }
 -(AVCaptureVideoPreviewLayer*)startAVCaptureWithDelegate:(id)obj andBkView:(UIView *)view;
 -(void)stopAVCapture;
+-(void)startAVCapture;
 @end

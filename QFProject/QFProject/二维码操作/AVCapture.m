@@ -45,4 +45,8 @@
 {
     [session stopRunning];
 }
+-(void)startAVCapture
+{
+    [session startRunning];
+}
 @end

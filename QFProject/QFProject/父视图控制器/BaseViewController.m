@@ -6,13 +6,24 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
-
+//导入点击行跳转的页面
 #import "BaseViewController.h"
-
-
+#import "AppDelegate.h"
+#import "DDMenuController.h"
+#import "MainViewController.h"
+#import "AVCaptureDeviceController.h"
+#import "QREncodeViewController.h"
+#import "NewsViewController.h"
 
 @interface BaseViewController ()
-
+{
+    //声明新闻趣事
+    NewsViewController * newsController;
+    //声明二维码生成
+    QREncodeViewController *qrController;
+    //声明二维码扫描
+    AVCaptureDeviceController *captureController;
+}
 @end
 
 @implementation BaseViewController
@@ -29,6 +40,7 @@
     // Do any additional setup after loading the view.
     //设置每个视图控制器的背景颜色
     self.view.backgroundColor=[UIColor whiteColor];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,28 +48,73 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-//当手机屏幕横竖屏状态即将发生改变时调用该方法
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+#pragma -mark 处理表格数据业务逻辑
+//当点击表格时调用，跳转到对应的视图控制器，在首页面显示
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft||toInterfaceOrientation==UIInterfaceOrientationLandscapeRight) {
-        //发送横屏状态消息
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"willAnimateRotationToInterfaceOrientation" object:@"SCREENHORIZENTAL"];
+    //通过单例调用App应用程序，获得代理
+    AppDelegate *delegate=[self delegateInApplication];
+    //调用侧滑页面
+    DDMenuController *menuController=delegate.menuController;
+    //调用侧滑页面中的主页面
+    MainViewController *mainController=delegate.mainController;
+    //清空主页面中所有子视图
+    [self removeAllSubviewFromMainControllerView];
+    switch (indexPath.row) {
+            //二维码扫描
+        case 1:
+        {
+            captureController=[[AVCaptureDeviceController alloc]init];
+            [mainController.view addSubview:captureController.view];
+            [menuController setRootController:mainController animated:YES];
+            break;
+        }
+            //二维码生成
+        case 2:
+        {
+            qrController=[[QREncodeViewController alloc]init];
+            [mainController.view addSubview:qrController.view];
+            [menuController setRootController:mainController animated:YES];
+            break;
+            
+        }
+            //新闻趣事
+        default:
+        {
+            newsController= [[NewsViewController alloc]init];
+            [mainController.view addSubview:newsController.view];
+            //当点击表格每行时返回首页面
+            [menuController setRootController:mainController animated:YES];
+            break;
+        }
     }
-    else
-    {
-        //发送纵屏状态消息
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"willAnimateRotationToInterfaceOrientation" object:@"SCREENVERTICAL"];
+}
+
+//删除主视图中所有的子视图
+-(void)removeAllSubviewFromMainControllerView
+{
+    //调用应用程序中的代理
+    AppDelegate *delegate=[self delegateInApplication];
+    //调用代理中的主页视图控制器
+    MainViewController *mainController=delegate.mainController;
+    //通过枚举便利删除主视图控制器中的所有子视图
+    UIView *mainView=mainController.view;
+    for (UIView *view in [mainView subviews]) {
+        //删除视图
+        [view removeFromSuperview];
     }
+    
+}
+
+//获得应用程序中的代理方
+-(AppDelegate *)delegateInApplication
+{
+    //通过单例调用App
+    UIApplication *app=[UIApplication sharedApplication];
+    //通过属性调用App中的代理方
+    AppDelegate *delegate=app.delegate;
+    return delegate;
 }
 
 

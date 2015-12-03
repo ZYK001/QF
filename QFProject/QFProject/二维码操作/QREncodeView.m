@@ -20,10 +20,22 @@
 
 -(void)createQREncodeImageView:(UIView *)supperView andStringContent:(NSString *)content;
 {
-    UIImageView *imgView=[[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIImageView *imgView=[[UIImageView alloc]init];
     imgView.image=[QRCodeGenerator qrImageForString:content imageSize:200];
-//    /[self setAutoLayOutOnTheViewWithMasonry:imgView supperView:supperView leftMargin:100 topMargin:50 rightMargin:50 bottomMargin:200];
+    //[self setAutoLayOutOnTheViewWithMasonry:imgView supperView:self leftMargin:100 topMargin:50 rightMargin:50 bottomMargin:200];
+    self.backgroundColor=[UIColor whiteColor];
+    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        //设置相对坐标
+//        make.edges.equalTo(self.mas_top).offset(10);
+//        make.edges.equalTo(self.mas_left).offset(10);
+//        make.edges.equalTo(self.mas_bottom).offset(10);
+//        make.edges.equalTo(self.mas_right).offset(10);
+        
+    }];
+    [self addSubview:imgView];
 }
+
 
 
 @end
