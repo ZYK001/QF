@@ -14,9 +14,12 @@
 #import "AVCaptureDeviceController.h"
 #import "QREncodeViewController.h"
 #import "NewsViewController.h"
+#import "PlayerViewController.h"
 
 @interface BaseViewController ()
 {
+    //声明视频播放器
+    PlayerViewController *playerController;
     //声明新闻趣事
     NewsViewController * newsController;
     //声明二维码生成
@@ -62,6 +65,15 @@
     //清空主页面中所有子视图
     [self removeAllSubviewFromMainControllerView];
     switch (indexPath.row) {
+            //自定义视频播放器
+        case 0:
+        {
+            playerController=[[PlayerViewController alloc]init];
+            [mainController.view addSubview:playerController.view];
+            [menuController setRootController:playerController animated:YES];
+            break;
+            
+        }
             //二维码扫描
         case 1:
         {
@@ -80,12 +92,19 @@
             
         }
             //新闻趣事
-        default:
+        case 3:
         {
             newsController= [[NewsViewController alloc]init];
             [mainController.view addSubview:newsController.view];
             //当点击表格每行时返回首页面
             [menuController setRootController:mainController animated:YES];
+            break;
+        }
+        default:
+        {
+            playerController=[[PlayerViewController alloc]init];
+            [mainController.view addSubview:playerController.view];
+            [menuController setRootController:playerController animated:YES];
             break;
         }
     }
@@ -115,6 +134,12 @@
     //通过属性调用App中的代理方
     AppDelegate *delegate=app.delegate;
     return delegate;
+}
+
+//向当前视图控制器中添加子视图
+-(void)addSubViewOnCurrentController:(UIView *)view
+{
+    [self.view addSubview:view];
 }
 
 

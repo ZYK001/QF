@@ -10,4 +10,6 @@
 
 @interface News : BaseModel
 
+
+
 @end

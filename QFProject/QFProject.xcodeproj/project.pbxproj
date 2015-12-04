@@ -29,6 +29,8 @@
 		B4688B9A1C0FEC970030BD20 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688B991C0FEC970030BD20 /* NewsViewController.m */; };
 		B4688BA01C0FECD30030BD20 /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688B9F1C0FECD30030BD20 /* NewsView.m */; };
 		B4688BA31C0FECDD0030BD20 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688BA21C0FECDD0030BD20 /* News.m */; };
+		B46A229A1C111DA6000F65F9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A22991C111DA6000F65F9 /* PlayerViewController.m */; };
+		B46A229D1C111DB5000F65F9 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A229C1C111DB5000F65F9 /* PlayerView.m */; };
 		B4A8F3D21C0D4A9900222CEF /* ChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8F3CB1C0D4A9900222CEF /* ChildView.m */; };
 		B4A8F3D31C0D4A9900222CEF /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8F3CD1C0D4A9900222CEF /* ChildViewController.m */; };
 		B4A8F3D41C0D4A9900222CEF /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8F3CF1C0D4A9900222CEF /* MainView.m */; };
@@ -80,8 +82,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4618D69DCB888EEAB78B883F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		65A9222DAB02E979D92664CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E88FD23FB0E742C1E5D9AA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AC7FDBB85FA86EC750AAB041 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B41150121C0EA062007B564E /* AVCaptureDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCaptureDeviceController.h; sourceTree = "<group>"; };
 		B41150131C0EA062007B564E /* AVCaptureDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCaptureDeviceController.m; sourceTree = "<group>"; };
 		B41150181C0EC420007B564E /* ScanBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBoxView.h; sourceTree = "<group>"; };
@@ -124,6 +127,10 @@
 		B4688B9F1C0FECD30030BD20 /* NewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
 		B4688BA11C0FECDD0030BD20 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		B4688BA21C0FECDD0030BD20 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		B46A22981C111DA6000F65F9 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		B46A22991C111DA6000F65F9 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		B46A229B1C111DB5000F65F9 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		B46A229C1C111DB5000F65F9 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		B4A8F3CA1C0D4A9900222CEF /* ChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildView.h; sourceTree = "<group>"; };
 		B4A8F3CB1C0D4A9900222CEF /* ChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildView.m; sourceTree = "<group>"; };
 		B4A8F3CC1C0D4A9900222CEF /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
@@ -185,7 +192,6 @@
 		B4FFE4D21C0B64E800DD5E91 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B4FFE5141C0B6BB400DD5E91 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		B4FFE5151C0B6BB400DD5E91 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
-		BBACD7B1CEA795042BD7C322 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,8 +231,8 @@
 		410406CF294ECE3287B25957 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBACD7B1CEA795042BD7C322 /* Pods.debug.xcconfig */,
-				8E88FD23FB0E742C1E5D9AA4 /* Pods.release.xcconfig */,
+				AC7FDBB85FA86EC750AAB041 /* Pods.debug.xcconfig */,
+				4618D69DCB888EEAB78B883F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 		B42637BB1C06739400D1CDCD /* QFProject */ = {
 			isa = PBXGroup;
 			children = (
+				B46A22941C111D78000F65F9 /* 自定制播放器 */,
 				B4688B941C0FEC6C0030BD20 /* 企业要闻 */,
 				B41150111C0EA02D007B564E /* 二维码操作 */,
 				B4A8F3D91C0D4BC300222CEF /* 父视图控制器 */,
@@ -423,6 +430,41 @@
 			children = (
 				B4688B981C0FEC970030BD20 /* NewsViewController.h */,
 				B4688B991C0FEC970030BD20 /* NewsViewController.m */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		B46A22941C111D78000F65F9 /* 自定制播放器 */ = {
+			isa = PBXGroup;
+			children = (
+				B46A22971C111D8C000F65F9 /* C */,
+				B46A22961C111D87000F65F9 /* V */,
+				B46A22951C111D82000F65F9 /* M */,
+			);
+			path = "自定制播放器";
+			sourceTree = "<group>";
+		};
+		B46A22951C111D82000F65F9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		B46A22961C111D87000F65F9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				B46A229B1C111DB5000F65F9 /* PlayerView.h */,
+				B46A229C1C111DB5000F65F9 /* PlayerView.m */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		B46A22971C111D8C000F65F9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B46A22981C111DA6000F65F9 /* PlayerViewController.h */,
+				B46A22991C111DA6000F65F9 /* PlayerViewController.m */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -775,10 +817,12 @@
 				B4A8F3E51C0D4C0400222CEF /* BaseModel.m in Sources */,
 				B4A8F3E21C0D4BF600222CEF /* BaseView.m in Sources */,
 				B41150141C0EA062007B564E /* AVCaptureDeviceController.m in Sources */,
+				B46A229D1C111DB5000F65F9 /* PlayerView.m in Sources */,
 				B411503B1C0ED8B3007B564E /* QREncodeViewController.m in Sources */,
 				B4688BA31C0FECDD0030BD20 /* News.m in Sources */,
 				B4FFE4FF1C0B64E800DD5E91 /* README.md in Sources */,
 				B4A8F3D31C0D4A9900222CEF /* ChildViewController.m in Sources */,
+				B46A229A1C111DA6000F65F9 /* PlayerViewController.m in Sources */,
 				B4FFE50B1C0B64E800DD5E91 /* Reachability.m in Sources */,
 				B4FFE4F91C0B64E800DD5E91 /* AFJSONRequestOperation.m in Sources */,
 				B4FFE4FA1C0B64E800DD5E91 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -863,7 +907,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -904,7 +947,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -914,7 +956,7 @@
 		};
 		B42637DD1C06739400D1CDCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBACD7B1CEA795042BD7C322 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = AC7FDBB85FA86EC750AAB041 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yingkui Zhao (3627GME2CH)";
@@ -938,18 +980,41 @@
 					"$(PROJECT_DIR)/Libraries/lib",
 					"$(PROJECT_DIR)/Libraries/ZBarSDK",
 				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-all_load";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch";
-				VALID_ARCHS = "armv7 arm64 armv7s";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
 		B42637DE1C06739400D1CDCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E88FD23FB0E742C1E5D9AA4 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 4618D69DCB888EEAB78B883F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yingkui Zhao (3627GME2CH)";
@@ -973,12 +1038,35 @@
 					"$(PROJECT_DIR)/Libraries/lib",
 					"$(PROJECT_DIR)/Libraries/ZBarSDK",
 				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-all_load";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch";
-				VALID_ARCHS = "armv7 arm64 armv7s";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};

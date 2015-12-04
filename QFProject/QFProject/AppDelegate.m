@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "APService.h"
+#import "BaseModel.h"
+#import "PlayerViewController.h"
 @interface AppDelegate ()
-
+{
+    PlayerViewController *playerController;
+}
 @end
 
 @implementation AppDelegate
@@ -18,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    BaseModel *base=[[BaseModel alloc]init];
+    [base GET:nil successfull:nil failed:nil];
     //注册推送
     [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
                                                    UIRemoteNotificationTypeSound |
@@ -28,7 +34,11 @@
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
     
+   
+    
     self.mainController=[[MainViewController alloc]init];
+    playerController=[[PlayerViewController alloc]init];
+    [self.mainController.view addSubview:playerController.view];
     self.leftController=[[ChildViewController alloc]init];
     self.menuController=[[DDMenuController alloc]initWithRootViewController:self.mainController];
     self.menuController.leftViewController=self.leftController;

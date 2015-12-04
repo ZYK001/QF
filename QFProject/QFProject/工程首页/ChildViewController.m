@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     
     //设置模型中需要使用的数据
-    self.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"清除缓存",@"断点续传",@"多表查询",@"本地推送",@"三方分享",@"连接服务",@"OAth2.0Share"];
+    self.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"新闻趣事",@"清除缓存",@"断点续传",@"多表查询",@"本地推送",@"三方分享",@"连接服务",@"OAth2.0Share"];
     //创建准备显示的左侧视图View
     leftViewInDDMenu=[[ChildView alloc]initWithFrame:self.view.frame tableViewDelegate:self];
     //将左侧视图View绑定到侧滑的左侧视图控制器中

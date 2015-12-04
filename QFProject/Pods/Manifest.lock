@@ -28,7 +28,7 @@ PODS:
   - SDWebImage/Core (3.7.3)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking (~> 2.5)
   - JSONModel
   - Masonry (~> 0.6.3)
   - MBProgressHUD (~> 0.9.1)
