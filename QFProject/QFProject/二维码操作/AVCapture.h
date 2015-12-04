@@ -10,10 +10,5 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 @interface AVCapture : NSObject
-{
-    AVCaptureSession * session;
-}
--(AVCaptureVideoPreviewLayer*)startAVCaptureWithDelegate:(id)obj andBkView:(UIView *)view;
--(void)stopAVCapture;
--(void)startAVCapture;
+
 @end

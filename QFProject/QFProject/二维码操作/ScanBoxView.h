@@ -17,7 +17,7 @@
  
 }
 //将扫描线及扫描框添加到视图
--(void)addScanBoxandScanlineLayer:(AVCaptureVideoPreviewLayer *) layer;
+-(void)addScanBoxandScanlineLayer;
 //扫描结束时移除扫描线
 -(void)removeScanLayerFromSupperView;
 @end

@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //生成二维码
-    QREncodeView *qr=[[QREncodeView alloc]initWithFrame:self.view.bounds];
+    QREncodeView *qr=[[QREncodeView alloc]initWithFrame:CGRectMake(SWEIDTH/2-100, SHEIGHT/2-100, 200, 200)];
     //将生成的二维码添加到视图
     [self.view addSubview:qr];
-    [qr createQREncodeImageView:self.view andStringContent:@"abc"];
+    [qr createQREncodeImageView:self.view andStringContent:@"KK直播"];
     
 }
 

@@ -20,19 +20,14 @@
 
 -(void)createQREncodeImageView:(UIView *)supperView andStringContent:(NSString *)content;
 {
-    UIImageView *imgView=[[UIImageView alloc]init];
+    UILabel *lbContent=[[UILabel alloc]initWithFrame:CGRectMake(-10, -50, 300, 20)];
+    lbContent.textColor=[UIColor orangeColor];
+    lbContent.text=@"下载KK直播，别忘记点赞哦～";
+    [self addSubview:lbContent];
+    
+    UIImageView *imgView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
     imgView.image=[QRCodeGenerator qrImageForString:content imageSize:200];
-    //[self setAutoLayOutOnTheViewWithMasonry:imgView supperView:self leftMargin:100 topMargin:50 rightMargin:50 bottomMargin:200];
     self.backgroundColor=[UIColor whiteColor];
-    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        //设置相对坐标
-//        make.edges.equalTo(self.mas_top).offset(10);
-//        make.edges.equalTo(self.mas_left).offset(10);
-//        make.edges.equalTo(self.mas_bottom).offset(10);
-//        make.edges.equalTo(self.mas_right).offset(10);
-        
-    }];
     [self addSubview:imgView];
 }
 

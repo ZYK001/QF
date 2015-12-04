@@ -6,17 +6,14 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
-#import "AVCapture.h"
 #import "ScanBoxView.h"
 #import "AVCaptureDeviceController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface AVCaptureDeviceController ()<AVCaptureMetadataOutputObjectsDelegate>
 {
-    //声明扫面框
-    ScanBoxView *_scanView;
-    //声明扫描器
-    AVCapture *_avCapture;
+    ScanBoxView *scanBox;
+    AVCaptureSession * session;
 }
 @end
 
@@ -25,35 +22,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    //创建输入流
+    AVCaptureDeviceInput * input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+    //创建输出流
+    AVCaptureMetadataOutput * output = [[AVCaptureMetadataOutput alloc]init];
+    //设置代理 在主线程里刷新
+    [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     
-    //创建模型
-    _avCapture=[[AVCapture alloc]init];
-    AVCaptureVideoPreviewLayer * layer =[_avCapture startAVCaptureWithDelegate:self andBkView:self.view];
-    //创建视图
-    _scanView=[[ScanBoxView alloc]initWithFrame:self.view.bounds];
-    _scanView.backgroundColor=[UIColor clearColor];
-    //在二维码扫面图层上添加视图
-    [_scanView addScanBoxandScanlineLayer:layer];
-    //讲扫描框添加到视图
-    [self.view addSubview:_scanView];
+    //初始化链接对象
+    session = [[AVCaptureSession alloc]init];
+    //高质量采集率
+    [session setSessionPreset:AVCaptureSessionPresetHigh];
+    
+    [session addInput:input];
+    [session addOutput:output];
+    //设置扫码支持的编码格式(如下设置条形码和二维码兼容)
+    output.metadataObjectTypes=@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
+    output.rectOfInterest=CGRectMake(200/SHEIGHT, (SWEIDTH-200)/2/SWEIDTH, 200, 200);
+    AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:session];
+    layer.videoGravity=AVLayerVideoGravityResizeAspectFill;
+    layer.frame=self.view.layer.bounds;
+    [self.view.layer insertSublayer:layer atIndex:0];
+    //开始捕获
+    [session startRunning];
+    
+    scanBox=[[ScanBoxView alloc]initWithFrame:self.view.bounds];
+    [scanBox addScanBoxandScanlineLayer];
+    [self.view addSubview:scanBox];
     
 }
 
-//退出该视图时，关闭二维码扫描
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    //关闭扫描
-    [_avCapture stopAVCapture];
-   
-}
-//进入该视图时，打开二维码扫描
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    //打开扫描
-    [_avCapture startAVCapture];
-}
+
 
 //当扫描到结果时调用该方法
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
@@ -62,14 +62,20 @@
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex : 0 ];
         //输出扫描字符串
         NSLog(@"%@",metadataObject.stringValue);
-        [_avCapture stopAVCapture];
-        [_scanView removeScanLayerFromSupperView];
+        //停止扫描
+        [session stopRunning];
+        [scanBox removeScanLayerFromSupperView];
         //跳转到扫描结果页面
         NSURL *toUrl=[NSURL URLWithString:metadataObject.stringValue];
         [[UIApplication sharedApplication]openURL:toUrl];
     }
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [session stopRunning];
+}
 
 
 
