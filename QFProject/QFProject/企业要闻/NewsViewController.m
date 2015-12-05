@@ -6,6 +6,7 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 #import "NewsView.h"
+#import "News.h"
 #import "NewsViewController.h"
 
 
@@ -23,12 +24,22 @@
     // Do any additional setup after loading the view
 
     //创建网络加载的数据
-    self.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"清除缓存"];
+    //self.dataSourceArray=@[@"首页面",@"扫一扫",@"二维码",@"清除缓存"];
     //创建新闻视图控制器中需要加载的视图
     newsView=[[NewsView alloc]initWithFrame:CGRectMake(0, 32, SWEIDTH, SHEIGHT-64) tableViewDelegate:self];
     //讲视图绑定到本视图控制器
     [self bindViewOnCurrentController:self withBindView:newsView];
     
+    
+    News *news=[[News alloc]init];
+    [news GET:@"http://apis.baidu.com/songshuxiansheng/news/news" successfull:^(id obj) {
+        self.dataSourceArray=[obj objectForKey:@"retData"];
+        [newsView.tableView reloadData];
+        
+    } failed:^(NSString *reason) {
+        
+    }];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +64,8 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strIdentifier];
     }
-    cell.textLabel.text=[[self dataSourceArray]objectAtIndex:indexPath.row];
+    NSDictionary *dict=[self.dataSourceArray objectAtIndex:indexPath.row];
+    cell.textLabel.text=[dict objectForKey:@"abstract"];
     return cell;
     
 }

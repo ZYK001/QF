@@ -21,9 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    BaseModel *base=[[BaseModel alloc]init];
-    [base GET:nil successfull:nil failed:nil];
     //注册推送
     [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
                                                    UIRemoteNotificationTypeSound |

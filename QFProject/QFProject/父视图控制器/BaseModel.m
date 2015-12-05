@@ -12,11 +12,21 @@
 
 -(void)GET:(NSString *)stringURL successfull:(DataSuccessfull ) dataSuccessfull failed:(DataFailed )dataFailed
 {
-    NSString *httpUrl = @"http://apis.baidu.com/txapi/keji/keji";
-    NSString *httpArg = @"num=10&page=1";
+    NSString *httpUrl = @"http://apis.baidu.com/songshuxiansheng/news/news";
+    NSString *httpArg = @"";
     NSString *URL = [self request:httpUrl withHttpArg:httpArg];
-//    AFHTTPRequestOperationManager *op=[AFHTTPRequestOperationManager manager];
-//    op.securityPolicy.allowInvalidCertificates = YES;
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"e26faa1564a7dfde6466a930baae40ee" forHTTPHeaderField:@"apiKey"];
+    [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dict);
+        dataSuccessfull(dict);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error.localizedDescription);
+        dataFailed(error.localizedDescription);
+    }];
 }
 
 
