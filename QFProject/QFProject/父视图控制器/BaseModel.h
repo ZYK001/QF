@@ -6,7 +6,7 @@
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "AFNetworking.h"
+#import "AFNetworking/AFHTTPRequestOperationManager.h"
 #import <Foundation/Foundation.h>
 
 //声明加载网络数据成功时调用的Block

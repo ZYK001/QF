@@ -1,5 +1,5 @@
 platform :ios, '7.0'
-pod 'AFNetworking', '~>2.5'
+pod 'AFNetworking', '~>2.3'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'JSONModel'
 pod 'Masonry', '~> 0.6.3'

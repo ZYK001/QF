@@ -21,6 +21,7 @@
 		B41150381C0ED846007B564E /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = B411502F1C0ED846007B564E /* split.c */; };
 		B411503B1C0ED8B3007B564E /* QREncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B411503A1C0ED8B3007B564E /* QREncodeViewController.m */; };
 		B411503E1C0ED8CE007B564E /* QREncodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B411503D1C0ED8CE007B564E /* QREncodeView.m */; };
+		B41291B51C11676800A401CC /* NewsTbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41291B41C11676800A401CC /* NewsTbCell.m */; };
 		B42637BF1C06739400D1CDCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637BE1C06739400D1CDCD /* main.m */; };
 		B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637C11C06739400D1CDCD /* AppDelegate.m */; };
 		B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42637C91C06739400D1CDCD /* Images.xcassets */; };
@@ -111,6 +112,8 @@
 		B411503A1C0ED8B3007B564E /* QREncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncodeViewController.m; sourceTree = "<group>"; };
 		B411503C1C0ED8CE007B564E /* QREncodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncodeView.h; sourceTree = "<group>"; };
 		B411503D1C0ED8CE007B564E /* QREncodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncodeView.m; sourceTree = "<group>"; };
+		B41291B31C11676800A401CC /* NewsTbCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTbCell.h; sourceTree = "<group>"; };
+		B41291B41C11676800A401CC /* NewsTbCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTbCell.m; sourceTree = "<group>"; };
 		B42637B91C06739400D1CDCD /* QFProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42637BD1C06739400D1CDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42637BE1C06739400D1CDCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -331,6 +334,20 @@
 			path = libqrencode;
 			sourceTree = "<group>";
 		};
+		B41291B61C1167EE00A401CC /* 数据库操作 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "数据库操作";
+			sourceTree = "<group>";
+		};
+		B41291B71C1192E600A401CC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		B42637B01C06739400D1CDCD = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +372,7 @@
 		B42637BB1C06739400D1CDCD /* QFProject */ = {
 			isa = PBXGroup;
 			children = (
+				B41291B61C1167EE00A401CC /* 数据库操作 */,
 				B46A22941C111D78000F65F9 /* 自定制播放器 */,
 				B4688B941C0FEC6C0030BD20 /* 企业要闻 */,
 				B41150111C0EA02D007B564E /* 二维码操作 */,
@@ -421,6 +439,8 @@
 			children = (
 				B4688B9E1C0FECD30030BD20 /* NewsView.h */,
 				B4688B9F1C0FECD30030BD20 /* NewsView.m */,
+				B41291B31C11676800A401CC /* NewsTbCell.h */,
+				B41291B41C11676800A401CC /* NewsTbCell.m */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -574,6 +594,7 @@
 		B4FFE4A21C0B64E800DD5E91 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B41291B71C1192E600A401CC /* Tools */,
 				B411501F1C0ED837007B564E /* 生成二维码 */,
 				B4F103A01C0BE2D5008E3728 /* 判断网络 */,
 				B4F1039E1C0BE2A7008E3728 /* 极光推送 */,
@@ -806,6 +827,7 @@
 				B4FFE4FB1C0B64E800DD5E91 /* AFPropertyListRequestOperation.m in Sources */,
 				B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */,
 				B4688BA01C0FECD30030BD20 /* NewsView.m in Sources */,
+				B41291B51C11676800A401CC /* NewsTbCell.m in Sources */,
 				B41150371C0ED846007B564E /* rscode.c in Sources */,
 				B4FFE4FC1C0B64E800DD5E91 /* AFURLConnectionOperation.m in Sources */,
 				B4A8F3D21C0D4A9900222CEF /* ChildView.m in Sources */,
@@ -978,7 +1000,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/lib",
-					"$(PROJECT_DIR)/Libraries/ZBarSDK",
+					"$(SRCROOT)/FMDB",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -1007,8 +1029,8 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch";
-				VALID_ARCHS = "armv7 armv7s";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
+				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Debug;
 		};
@@ -1036,7 +1058,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/lib",
-					"$(PROJECT_DIR)/Libraries/ZBarSDK",
+					"$(SRCROOT)/FMDB",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -1065,8 +1087,8 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch";
-				VALID_ARCHS = "armv7 armv7s";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
+				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Release;
 		};
