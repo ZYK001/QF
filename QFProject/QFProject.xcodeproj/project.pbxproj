@@ -21,7 +21,11 @@
 		B41150381C0ED846007B564E /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = B411502F1C0ED846007B564E /* split.c */; };
 		B411503B1C0ED8B3007B564E /* QREncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B411503A1C0ED8B3007B564E /* QREncodeViewController.m */; };
 		B411503E1C0ED8CE007B564E /* QREncodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B411503D1C0ED8CE007B564E /* QREncodeView.m */; };
-		B41291B51C11676800A401CC /* NewsTbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41291B41C11676800A401CC /* NewsTbCell.m */; };
+		B41291CC1C1404D300A401CC /* NObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B41291CB1C1404D300A401CC /* NObj.m */; };
+		B41291D31C14060D00A401CC /* NObjCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41291D11C14060D00A401CC /* NObjCell.m */; };
+		B41291D41C14060D00A401CC /* NObjCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41291D21C14060D00A401CC /* NObjCell.xib */; };
+		B41291D81C140E3600A401CC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41291D61C140E3600A401CC /* DetailViewController.m */; };
+		B41291D91C140E3600A401CC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41291D71C140E3600A401CC /* DetailViewController.xib */; };
 		B42637BF1C06739400D1CDCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637BE1C06739400D1CDCD /* main.m */; };
 		B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637C11C06739400D1CDCD /* AppDelegate.m */; };
 		B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42637C91C06739400D1CDCD /* Images.xcassets */; };
@@ -100,8 +104,14 @@
 		B411503A1C0ED8B3007B564E /* QREncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncodeViewController.m; sourceTree = "<group>"; };
 		B411503C1C0ED8CE007B564E /* QREncodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncodeView.h; sourceTree = "<group>"; };
 		B411503D1C0ED8CE007B564E /* QREncodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncodeView.m; sourceTree = "<group>"; };
-		B41291B31C11676800A401CC /* NewsTbCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTbCell.h; sourceTree = "<group>"; };
-		B41291B41C11676800A401CC /* NewsTbCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTbCell.m; sourceTree = "<group>"; };
+		B41291CA1C1404D300A401CC /* NObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NObj.h; sourceTree = "<group>"; };
+		B41291CB1C1404D300A401CC /* NObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NObj.m; sourceTree = "<group>"; };
+		B41291D01C14060D00A401CC /* NObjCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NObjCell.h; sourceTree = "<group>"; };
+		B41291D11C14060D00A401CC /* NObjCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NObjCell.m; sourceTree = "<group>"; };
+		B41291D21C14060D00A401CC /* NObjCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NObjCell.xib; sourceTree = "<group>"; };
+		B41291D51C140E3600A401CC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B41291D61C140E3600A401CC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B41291D71C140E3600A401CC /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		B42637B91C06739400D1CDCD /* QFProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42637BD1C06739400D1CDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42637BE1C06739400D1CDCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -395,6 +405,8 @@
 			children = (
 				B4688BA11C0FECDD0030BD20 /* News.h */,
 				B4688BA21C0FECDD0030BD20 /* News.m */,
+				B41291CA1C1404D300A401CC /* NObj.h */,
+				B41291CB1C1404D300A401CC /* NObj.m */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -404,8 +416,9 @@
 			children = (
 				B4688B9E1C0FECD30030BD20 /* NewsView.h */,
 				B4688B9F1C0FECD30030BD20 /* NewsView.m */,
-				B41291B31C11676800A401CC /* NewsTbCell.h */,
-				B41291B41C11676800A401CC /* NewsTbCell.m */,
+				B41291D01C14060D00A401CC /* NObjCell.h */,
+				B41291D11C14060D00A401CC /* NObjCell.m */,
+				B41291D21C14060D00A401CC /* NObjCell.xib */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -415,6 +428,9 @@
 			children = (
 				B4688B981C0FEC970030BD20 /* NewsViewController.h */,
 				B4688B991C0FEC970030BD20 /* NewsViewController.m */,
+				B41291D51C140E3600A401CC /* DetailViewController.h */,
+				B41291D61C140E3600A401CC /* DetailViewController.m */,
+				B41291D71C140E3600A401CC /* DetailViewController.xib */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -680,6 +696,8 @@
 			files = (
 				B42637CD1C06739400D1CDCD /* LaunchScreen.xib in Resources */,
 				B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */,
+				B41291D91C140E3600A401CC /* DetailViewController.xib in Resources */,
+				B41291D41C14060D00A401CC /* NObjCell.xib in Resources */,
 				B4FFE49D1C0B4DFD00DD5E91 /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,10 +774,11 @@
 				B41150381C0ED846007B564E /* split.c in Sources */,
 				B42637C21C06739400D1CDCD /* AppDelegate.m in Sources */,
 				B4688BA01C0FECD30030BD20 /* NewsView.m in Sources */,
-				B41291B51C11676800A401CC /* NewsTbCell.m in Sources */,
+				B41291CC1C1404D300A401CC /* NObj.m in Sources */,
 				B41150371C0ED846007B564E /* rscode.c in Sources */,
 				B4A8F3D21C0D4A9900222CEF /* ChildView.m in Sources */,
 				B41150321C0ED846007B564E /* mask.c in Sources */,
+				B41291D31C14060D00A401CC /* NObjCell.m in Sources */,
 				B4A8F3D51C0D4A9900222CEF /* MainViewController.m in Sources */,
 				B4FFE5161C0B6BB400DD5E91 /* DDMenuController.m in Sources */,
 				B41150361C0ED846007B564E /* qrspec.c in Sources */,
@@ -774,6 +793,7 @@
 				B4FFE50B1C0B64E800DD5E91 /* Reachability.m in Sources */,
 				B411501D1C0EC479007B564E /* AVCapture.m in Sources */,
 				B41150311C0ED846007B564E /* bitstream.c in Sources */,
+				B41291D81C140E3600A401CC /* DetailViewController.m in Sources */,
 				B411501A1C0EC420007B564E /* ScanBoxView.m in Sources */,
 				B411503E1C0ED8CE007B564E /* QREncodeView.m in Sources */,
 				B42637BF1C06739400D1CDCD /* main.m in Sources */,

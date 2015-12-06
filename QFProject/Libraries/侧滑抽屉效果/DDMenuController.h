@@ -26,6 +26,7 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^finishBlock) (NSString *Ok);
 typedef enum {
     DDMenuPanDirectionLeft = 0,
     DDMenuPanDirectionRight,
@@ -69,6 +70,9 @@ typedef enum {
 @property(nonatomic,readonly) UIPanGestureRecognizer *pan;
 
 - (void)setRootController:(UIViewController *)controller animated:(BOOL)animated; // used to push a new controller on the stack
+
+- (void)setRootController:(UIViewController *)controller animated:(BOOL)animated animationFinished:(finishBlock )finish;
+
 - (void)showRootController:(BOOL)animated; // reset to "home" view controller
 - (void)showRightController:(BOOL)animated;  // show right
 - (void)showLeftController:(BOOL)animated;  // show left

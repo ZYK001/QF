@@ -647,6 +647,49 @@
      
 }
 
+- (void)setRootController:(UIViewController *)controller animated:(BOOL)animated animationFinished:(finishBlock )finish
+{
+    
+    if (!controller) {
+        [self setRootViewController:controller];
+        return;
+    }
+    
+    if (_menuFlags.showingLeftView) {
+        
+        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+        
+        // slide out then come back with the new root
+        __block DDMenuController *selfRef = self;
+        __block UIViewController *rootRef = _root;
+        CGRect frame = rootRef.view.frame;
+        frame.origin.x = rootRef.view.bounds.size.width;
+        
+        [UIView animateWithDuration:.1 animations:^{
+            
+            rootRef.view.frame = frame;
+            
+        } completion:^(BOOL finished) {
+            
+            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+            
+            [selfRef setRootViewController:controller];
+            _root.view.frame = frame;
+            [selfRef showRootController:animated];
+            finish(@"OkFinished");
+            
+        }];
+        
+    } else {
+        
+        // just add the root and move to it if it's not center
+        [self setRootViewController:controller];
+        [self showRootController:animated];
+        
+    }
+
+}
+
 
 #pragma mark - Root Controller Navigation
 

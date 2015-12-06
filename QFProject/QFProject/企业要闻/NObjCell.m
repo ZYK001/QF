@@ -1,14 +1,14 @@
 //
-//  NewsTbCell.m
+//  NObjCell.m
 //  QFProject
 //
-//  Created by 赵英奎 on 15/12/4.
+//  Created by 赵英奎 on 15/12/6.
 //  Copyright © 2015年 赵英奎. All rights reserved.
 //
 
-#import "NewsTbCell.h"
+#import "NObjCell.h"
 
-@implementation NewsTbCell
+@implementation NObjCell
 
 - (void)awakeFromNib {
     // Initialization code

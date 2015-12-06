@@ -7,8 +7,8 @@
 //
 
 //导入点击行跳转的页面
-#import "BaseViewController.h"
 #import "AppDelegate.h"
+#import "BaseViewController.h"
 #import "DDMenuController.h"
 #import "MainViewController.h"
 #import "AVCaptureDeviceController.h"
@@ -70,7 +70,11 @@
         {
             playerController=[[PlayerViewController alloc]init];
             [mainController.view addSubview:playerController.view];
-            [menuController setRootController:playerController animated:YES];
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"KK直播";
+            }];
+
             break;
             
         }
@@ -79,7 +83,11 @@
         {
             captureController=[[AVCaptureDeviceController alloc]init];
             [mainController.view addSubview:captureController.view];
-            [menuController setRootController:mainController animated:YES];
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"扫一扫";
+            }];
+
             break;
         }
             //二维码生成
@@ -87,7 +95,11 @@
         {
             qrController=[[QREncodeViewController alloc]init];
             [mainController.view addSubview:qrController.view];
-            [menuController setRootController:mainController animated:YES];
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"二维码";
+            }];
+
             break;
             
         }
@@ -97,14 +109,21 @@
             newsController= [[NewsViewController alloc]init];
             [mainController.view addSubview:newsController.view];
             //当点击表格每行时返回首页面
-            [menuController setRootController:mainController animated:YES];
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"新闻趣事";
+            }];
             break;
         }
         default:
         {
             playerController=[[PlayerViewController alloc]init];
             [mainController.view addSubview:playerController.view];
-            [menuController setRootController:playerController animated:YES];
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"KK直播";
+            }];
+
             break;
         }
     }

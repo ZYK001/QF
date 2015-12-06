@@ -8,7 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
-
+@class AppDelegate;
 
 @interface BaseViewController : UIViewController
 //设置表格中加载数据的数据元数组
@@ -17,5 +17,5 @@
 -(void)bindViewOnCurrentController:(UIViewController *)vc withBindView:(UIView *)view;
 //向视图控制器中添加子视图
 -(void)addSubViewOnCurrentController:(UIView *)view;
-
+-(AppDelegate *)delegateInApplication;
 @end
