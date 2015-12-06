@@ -31,6 +31,7 @@
 		B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42637C91C06739400D1CDCD /* Images.xcassets */; };
 		B42637CD1C06739400D1CDCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42637CB1C06739400D1CDCD /* LaunchScreen.xib */; };
 		B42637D91C06739400D1CDCD /* QFProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B42637D81C06739400D1CDCD /* QFProjectTests.m */; };
+		B4466F201C14892500E75CE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4466F221C14892500E75CE8 /* Localizable.strings */; };
 		B4688B9A1C0FEC970030BD20 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688B991C0FEC970030BD20 /* NewsViewController.m */; };
 		B4688BA01C0FECD30030BD20 /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688B9F1C0FECD30030BD20 /* NewsView.m */; };
 		B4688BA31C0FECDD0030BD20 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688BA21C0FECDD0030BD20 /* News.m */; };
@@ -122,6 +123,9 @@
 		B42637D21C06739400D1CDCD /* QFProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QFProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42637D71C06739400D1CDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42637D81C06739400D1CDCD /* QFProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFProjectTests.m; sourceTree = "<group>"; };
+		B4466F1D1C1486EF00E75CE8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B4466F211C14892500E75CE8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B4466F241C14892800E75CE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B4688B981C0FEC970030BD20 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B4688B991C0FEC970030BD20 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B4688B9E1C0FECD30030BD20 /* NewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 				B42637BD1C06739400D1CDCD /* Info.plist */,
 				B42637BE1C06739400D1CDCD /* main.m */,
 				B4A8F3E61C0D4ED200222CEF /* QFProjectPCHFile.pch */,
+				B4466F221C14892500E75CE8 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42637CD1C06739400D1CDCD /* LaunchScreen.xib in Resources */,
+				B4466F201C14892500E75CE8 /* Localizable.strings in Resources */,
 				B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */,
 				B41291D91C140E3600A401CC /* DetailViewController.xib in Resources */,
 				B41291D41C14060D00A401CC /* NObjCell.xib in Resources */,
@@ -823,8 +829,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				B42637CC1C06739400D1CDCD /* Base */,
+				B4466F1D1C1486EF00E75CE8 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B4466F221C14892500E75CE8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4466F211C14892500E75CE8 /* zh-Hans */,
+				B4466F241C14892800E75CE8 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

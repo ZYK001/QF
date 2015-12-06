@@ -38,6 +38,16 @@
     [self.view addSubview:chatBtn];
     //给按钮添加点击事件
     [chatBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //添加按钮下的描述文字
+    UILabel *lbDescription=[[UILabel alloc]initWithFrame:CGRectMake(SWEIDTH/2-((SHEIGHT-364)/4), 300+(SHEIGHT-364)/2+30, (SHEIGHT-364)/2,100)];
+    lbDescription.text=NSLocalizedString(@"按钮描述", nil);
+    lbDescription.textColor=[UIColor redColor];
+    lbDescription.numberOfLines=0;
+    lbDescription.lineBreakMode=NSLineBreakByCharWrapping;
+    lbDescription.font=[UIFont systemFontOfSize:15];
+    [self.view addSubview:lbDescription];
+    
 }
 -(void)btnClick:(UIButton *)bt
 {

@@ -31,8 +31,6 @@
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
     
-   
-    
     self.mainController=[[MainViewController alloc]init];
     playerController=[[PlayerViewController alloc]init];
     [self.mainController.view addSubview:playerController.view];
@@ -41,7 +39,7 @@
     self.menuController.leftViewController=self.leftController;
     self.rootNavigationController=[[UINavigationController alloc]initWithRootViewController:self.menuController];
     [self.rootNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条"] forBarMetrics:UIBarMetricsDefault];
-    self.menuController.title=@"KK直播";
+    self.menuController.title=NSLocalizedString(@"工程名称", @"工程名称");
     self.window.rootViewController=self.rootNavigationController;
     [self.window makeKeyAndVisible];
     

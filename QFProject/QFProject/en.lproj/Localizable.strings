@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  QFProject
+
+  Created by 赵英奎 on 15/12/6.
+  Copyright © 2015年 赵英奎. All rights reserved.
+*/
+"工程名称"="KKAlive";
+"扫一扫"="Scan";
+"二维码"="QREncode";
+"新闻趣事"="News";
+"清除缓存"="ClearCache";
+"视频下载"="ResumeDownload";
+"本地闹钟"="LocalClock";
+"分享"="ShareToFriends";
+"按钮描述"="Click on the microphone to interact with the anchor";

@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  QFProject
+
+  Created by 赵英奎 on 15/12/6.
+  Copyright © 2015年 赵英奎. All rights reserved.
+*/
+
+"工程名称"="KK直播";
+"扫一扫"="扫一扫";
+"二维码"="二维码";
+"新闻趣事"="新闻趣事";
+"清除缓存"="清除缓存";
+"视频下载"="视频下载";
+"本地闹钟"="本地闹钟";
+"分享"="好友分享";
+"按钮描述"="点击麦克风与主播互动";
+
+"CFBundleDisplayName"="KKAlive";

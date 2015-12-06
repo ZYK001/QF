@@ -72,7 +72,7 @@
             [mainController.view addSubview:playerController.view];
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"KK直播";
+                menuVC.title=NSLocalizedString(@"工程名称", nil);
             }];
 
             break;
@@ -85,7 +85,7 @@
             [mainController.view addSubview:captureController.view];
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"扫一扫";
+                menuVC.title=NSLocalizedString(@"扫一扫", nil);
             }];
 
             break;
@@ -97,7 +97,7 @@
             [mainController.view addSubview:qrController.view];
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"二维码";
+                menuVC.title=NSLocalizedString(@"二维码", nil);
             }];
 
             break;
@@ -111,7 +111,7 @@
             //当点击表格每行时返回首页面
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"新闻趣事";
+                menuVC.title=NSLocalizedString(@"新闻趣事",nil);
             }];
             break;
         }
@@ -123,7 +123,7 @@
             //当点击表格每行时返回首页面
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"新闻趣事";
+                menuVC.title=NSLocalizedString(@"新闻趣事",nil);
             }];
             break;
             
@@ -136,7 +136,7 @@
             //当点击表格每行时返回首页面
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"新闻趣事";
+                menuVC.title=NSLocalizedString(@"新闻趣事",nil);
             }];
             break;
         }

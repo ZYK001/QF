@@ -25,7 +25,7 @@
         
         //添加播放器中的logo文字
         UILabel *playerName=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 30)];
-        playerName.text=@"KK直播";
+        playerName.text=NSLocalizedString(@"工程名称", nil);
         playerName.textColor=[UIColor orangeColor];
         playerName.backgroundColor=[UIColor clearColor];
         playerName.font=[UIFont systemFontOfSize:17];

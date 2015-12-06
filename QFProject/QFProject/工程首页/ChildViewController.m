@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     //设置模型中需要使用的数据
-    self.dataSourceArray=@[@"KK直播",@"扫一扫",@"二维码",@"新闻趣事",@"清除缓存",@"断点续传",@"多表查询",@"本地推送",@"三方分享",@"连接服务",@"OAth2.0Share"];
+    self.dataSourceArray=@[NSLocalizedString(@"工程名称", nil),NSLocalizedString(@"扫一扫", nil),NSLocalizedString(@"二维码", nil),NSLocalizedString(@"新闻趣事", nil),NSLocalizedString(@"清除缓存", nil),NSLocalizedString(@"视频下载", nil),NSLocalizedString(@"本地闹钟", nil),NSLocalizedString(@"分享", nil)];
     //创建准备显示的左侧视图View
     leftViewInDDMenu=[[ChildView alloc]initWithFrame:self.view.frame tableViewDelegate:self];
     //将左侧视图View绑定到侧滑的左侧视图控制器中
