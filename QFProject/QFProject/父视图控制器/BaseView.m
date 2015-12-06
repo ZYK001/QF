@@ -46,4 +46,17 @@
     [self.tableView setTableFooterView:view];
 }
 
+//为表格空间添加背景图片
+-(void)addBackGroundImageOnTableView
+{
+    UIImageView *backImgV=[[UIImageView alloc]initWithFrame:self.tableView.frame];
+    backImgV.image=[UIImage imageNamed:@"背景图"];
+    self.tableView.backgroundView=backImgV;
+}
+//设置表格的UITableViewCell颜色为透明
+-(void)setTableViewCellBackGroundColorAlphaWithClearColor
+{
+    self.tableView.backgroundColor=[UIColor clearColor];
+}
+
 @end

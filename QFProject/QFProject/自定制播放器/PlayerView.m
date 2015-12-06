@@ -26,7 +26,7 @@
         playerName.text=@"KK直播";
         playerName.textColor=[UIColor orangeColor];
         playerName.backgroundColor=[UIColor clearColor];
-        playerName.font=[UIFont systemFontOfSize:15];
+        playerName.font=[UIFont systemFontOfSize:17];
         [self addSubview:playerName];
         
         UIImageView *player=[[UIImageView alloc]initWithFrame:CGRectMake(self.bounds.size.width/2-25, self.bounds.size.height/2-25, 50, 50)];

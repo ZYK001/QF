@@ -11,10 +11,10 @@
 #import "BaseViewController.h"
 #import "DDMenuController.h"
 #import "MainViewController.h"
-#import "AVCaptureDeviceController.h"
 #import "QREncodeViewController.h"
 #import "NewsViewController.h"
 #import "PlayerViewController.h"
+#import "AVCaptureDeviceController.h"
 
 @interface BaseViewController ()
 {
@@ -115,15 +115,29 @@
             }];
             break;
         }
-        default:
+            
+        case 4:
         {
-            playerController=[[PlayerViewController alloc]init];
-            [mainController.view addSubview:playerController.view];
+            newsController= [[NewsViewController alloc]init];
+            [mainController.view addSubview:newsController.view];
+            //当点击表格每行时返回首页面
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=@"KK直播";
+                menuVC.title=@"新闻趣事";
             }];
-
+            break;
+            
+        }
+            
+        default:
+        {
+            newsController= [[NewsViewController alloc]init];
+            [mainController.view addSubview:newsController.view];
+            //当点击表格每行时返回首页面
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=@"新闻趣事";
+            }];
             break;
         }
     }

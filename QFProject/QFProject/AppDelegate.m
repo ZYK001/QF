@@ -40,6 +40,7 @@
     self.menuController=[[DDMenuController alloc]initWithRootViewController:self.mainController];
     self.menuController.leftViewController=self.leftController;
     self.rootNavigationController=[[UINavigationController alloc]initWithRootViewController:self.menuController];
+    [self.rootNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条"] forBarMetrics:UIBarMetricsDefault];
    
     self.window.rootViewController=self.rootNavigationController;
     [self.window makeKeyAndVisible];

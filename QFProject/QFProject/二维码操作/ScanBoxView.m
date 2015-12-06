@@ -21,7 +21,7 @@
 -(void)addScanBoxandScanlineLayer
 {
     //设置二维码的扫描边框
-    _boxView= [[UIView alloc] initWithFrame:CGRectMake(SWEIDTH/2-100,SHEIGHT/2-100,200  ,200)];
+    _boxView= [[UIView alloc] initWithFrame:CGRectMake(SWEIDTH/2-100,180,200  ,200)];
     _boxView.backgroundColor=[UIColor clearColor];
     _boxView.layer.borderColor=[[UIColor blackColor]CGColor];
     _boxView.layer.borderWidth=1;
@@ -32,10 +32,10 @@
     _scanLayer.backgroundColor = [UIColor greenColor];
     [_boxView addSubview:_scanLayer];
     
-    UILabel *lbContent=[[UILabel alloc]initWithFrame:CGRectMake(SWEIDTH/2-140, SHEIGHT/2-150, 300, 30)];
+    UILabel *lbContent=[[UILabel alloc]initWithFrame:CGRectMake(SWEIDTH/2-140, 130, 300, 30)];
     lbContent.text=@"将二维码/条形码放入框中，即可自动扫描哦";
     lbContent.font=[UIFont systemFontOfSize:15];
-    lbContent.textColor=[UIColor blueColor];
+    lbContent.textColor=[UIColor orangeColor];
     [self addSubview:lbContent];
     //通过动画移动扫描线
     [self moveScanLayer];

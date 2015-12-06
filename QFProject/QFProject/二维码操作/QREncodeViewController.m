@@ -17,11 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor=[UIColor colorWithRed:40/255.0 green:42/255.0 blue:45/255.0 alpha:0.5];
+    //背景图
+    UIImageView *backView=[[UIImageView alloc]initWithFrame:CGRectMake(50, 85, SWEIDTH-100, SHEIGHT-300)];
+    backView.image=[UIImage imageNamed:@"scan.png"];
+    [self.view addSubview:backView];
+    
     //生成二维码
-    QREncodeView *qr=[[QREncodeView alloc]initWithFrame:CGRectMake(SWEIDTH/2-100, SHEIGHT/2-100, 200, 200)];
+    QREncodeView *qr=[[QREncodeView alloc]initWithFrame:CGRectMake(20, 20, backView.frame.size.width-40, backView.frame.size.width-40)];
     //将生成的二维码添加到视图
-    [self.view addSubview:qr];
-    [qr createQREncodeImageView:self.view andStringContent:@"KK直播"];
+    [backView addSubview:qr];
+    [qr createQREncodeImageView:backView andStringContent:@"KK直播"];
     
 }
 

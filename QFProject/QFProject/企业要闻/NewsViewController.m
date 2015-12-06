@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view
 
     //创建新闻视图控制器中需要加载的视图
-    newsView=[[NewsView alloc]initWithFrame:CGRectMake(0, 32, SWEIDTH, SHEIGHT-64) tableViewDelegate:self];
+    newsView=[[NewsView alloc]initWithFrame:CGRectMake(0, 0, SWEIDTH, SHEIGHT-64) tableViewDelegate:self];
     //隐藏TableView中多余的行
     [newsView hideTableViewBotmlines];
     //注册自定制Cell

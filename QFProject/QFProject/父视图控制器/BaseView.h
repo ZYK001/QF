@@ -14,8 +14,14 @@
 //设置将要显示的表格
 @property(strong,nonatomic)UITableView *tableView;
 
+
+
 //隐藏表格中下方多余的lines
 -(void)hideTableViewBotmlines;
+//为表格空间添加背景图片
+-(void)addBackGroundImageOnTableView;
+//设置表格的UITableViewCell颜色为透明
+-(void)setTableViewCellBackGroundColorAlphaWithClearColor;
 //当加载该视图时首先将表格视图添加到当前View并设置表格代理
 -(id)initWithFrame:(CGRect)frame tableViewDelegate:(id)obj;
 //通过Masonry设置当前视图的适配

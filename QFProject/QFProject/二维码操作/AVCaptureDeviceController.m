@@ -39,7 +39,7 @@
     [session addOutput:output];
     //设置扫码支持的编码格式(如下设置条形码和二维码兼容)
     output.metadataObjectTypes=@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
-    output.rectOfInterest=CGRectMake(200/SHEIGHT, (SWEIDTH-200)/2/SWEIDTH, 200, 200);
+    output.rectOfInterest=CGRectMake(214/SHEIGHT, (SWEIDTH-200)/2/SWEIDTH, 200/SHEIGHT, 200/SWEIDTH);
     AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:session];
     layer.videoGravity=AVLayerVideoGravityResizeAspectFill;
     layer.frame=self.view.layer.bounds;

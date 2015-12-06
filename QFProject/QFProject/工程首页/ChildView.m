@@ -17,11 +17,11 @@
 {
     self=[super initWithFrame:frame tableViewDelegate:obj];
     if (self) {
-        CGRect frame=self.frame;
-        frame.origin.y=64;
         self.tableView.frame=frame;
         //调用父类中隐藏多余tableview的行
         [self hideTableViewBotmlines];
+        //添加背景图
+        [self addBackGroundImageOnTableView];
     }
     return self;
 }

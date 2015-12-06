@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    PlayerView * playerView=[[PlayerView alloc]initWithFrame:CGRectMake(0, 64, SWEIDTH, 300)];
+    PlayerView * playerView=[[PlayerView alloc]initWithFrame:CGRectMake(0, 0, SWEIDTH, 300)];
     playerView.backgroundColor=[UIColor blackColor];
     [self addSubViewOnCurrentController:playerView];
     
