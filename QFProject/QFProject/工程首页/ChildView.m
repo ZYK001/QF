@@ -17,7 +17,10 @@
 {
     self=[super initWithFrame:frame tableViewDelegate:obj];
     if (self) {
-        self.tableView.frame=frame;
+        CGRect rect=frame;
+        rect.size.height=rect.size.height-64;
+        self.tableView.frame=rect;
+        
         //调用父类中隐藏多余tableview的行
         [self hideTableViewBotmlines];
         //添加背景图

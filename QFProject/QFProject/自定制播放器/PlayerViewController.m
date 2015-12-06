@@ -16,10 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addBackGroundViewOnControllerView];
     // Do any additional setup after loading the view.
     PlayerView * playerView=[[PlayerView alloc]initWithFrame:CGRectMake(0, 0, SWEIDTH, 300)];
     playerView.backgroundColor=[UIColor blackColor];
     [self addSubViewOnCurrentController:playerView];
+    //添加与主播互动按钮
+    [self addChatBtns];
+   
+    
+}
+
+//添加与主播互动按钮
+-(void)addChatBtns
+{
+    //添加与主播互动按钮
+    UIButton *chatBtn=[UIButton buttonWithType:UIButtonTypeSystem];
+    [chatBtn setBackgroundImage:[UIImage imageNamed:@"sh.png"] forState:UIControlStateNormal];
+    //各个屏幕适配计算
+    chatBtn.frame=CGRectMake(SWEIDTH/2-((SHEIGHT-364)/4), 300, (SHEIGHT-364)/2, (SHEIGHT-364)/2);
+    [self.view addSubview:chatBtn];
+    //给按钮添加点击事件
+    [chatBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+-(void)btnClick:(UIButton *)bt
+{
     
 }
 

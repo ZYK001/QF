@@ -41,7 +41,7 @@
     self.menuController.leftViewController=self.leftController;
     self.rootNavigationController=[[UINavigationController alloc]initWithRootViewController:self.menuController];
     [self.rootNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条"] forBarMetrics:UIBarMetricsDefault];
-   
+    self.menuController.title=@"KK直播";
     self.window.rootViewController=self.rootNavigationController;
     [self.window makeKeyAndVisible];
     
@@ -60,7 +60,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 //接收发送的消息
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
+       NSLog(@"%@",userInfo);
     [APService handleRemoteNotification:userInfo];
+ 
     
 }
 

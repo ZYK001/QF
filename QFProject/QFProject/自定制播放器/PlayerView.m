@@ -22,6 +22,8 @@
 {
     self=[super initWithFrame:frame];
     if (self) {
+        
+        //添加播放器中的logo文字
         UILabel *playerName=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 30)];
         playerName.text=@"KK直播";
         playerName.textColor=[UIColor orangeColor];
@@ -29,11 +31,20 @@
         playerName.font=[UIFont systemFontOfSize:17];
         [self addSubview:playerName];
         
+//        UIImageView *logoView=[[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
+//        logoView.image=[UIImage imageNamed:@"logo"];
+//        [self addSubview:logoView];
+        
+        //添加播放器中的播放图片
         UIImageView *player=[[UIImageView alloc]initWithFrame:CGRectMake(self.bounds.size.width/2-25, self.bounds.size.height/2-25, 50, 50)];
         player.image=[UIImage imageNamed:@"首页-播放"];
         [self addSubview:player];
         
+        
+       
+        
     }
     return self;
 }
+
 @end

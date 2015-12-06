@@ -32,9 +32,9 @@
     _scanLayer.backgroundColor = [UIColor greenColor];
     [_boxView addSubview:_scanLayer];
     
-    UILabel *lbContent=[[UILabel alloc]initWithFrame:CGRectMake(SWEIDTH/2-140, 130, 300, 30)];
-    lbContent.text=@"将二维码/条形码放入框中，即可自动扫描哦";
-    lbContent.font=[UIFont systemFontOfSize:15];
+    UILabel *lbContent=[[UILabel alloc]initWithFrame:CGRectMake(SWEIDTH/2-150, 130, 300, 30)];
+    lbContent.text=@"将二维码/条形码放入框中，即可扫描哦";
+    lbContent.font=[UIFont systemFontOfSize:17];
     lbContent.textColor=[UIColor orangeColor];
     [self addSubview:lbContent];
     //通过动画移动扫描线

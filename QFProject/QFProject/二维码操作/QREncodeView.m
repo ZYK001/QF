@@ -20,7 +20,7 @@
 
 -(void)createQREncodeImageView:(UIView *)supperView andStringContent:(NSString *)content;
 {
-    UIImageView *imgView=[[UIImageView alloc]initWithFrame:CGRectMake(50, 80, supperView.frame.size.width-100, supperView.frame.size.width-100)];
+    UIImageView *imgView=[[UIImageView alloc]initWithFrame:CGRectMake(supperView.bounds.size.width/4, supperView.bounds.size.width/4, supperView.frame.size.width/2, supperView.frame.size.width/2)];
     imgView.image=[QRCodeGenerator qrImageForString:content imageSize:200];
     [supperView addSubview:imgView];
 }

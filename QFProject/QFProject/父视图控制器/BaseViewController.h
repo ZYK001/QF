@@ -19,5 +19,6 @@
 -(AppDelegate *)delegateInApplication;
 //通过MVC设计模式，在视图控制器中将每个视图控制器与View绑定到一起
 -(void)bindViewOnCurrentController:(UIViewController *)vc withBindView:(UIView *)view;
-
+//向当前页面添加背景图
+-(void)addBackGroundViewOnControllerView;
 @end

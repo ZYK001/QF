@@ -20,7 +20,7 @@
     
     self.view.backgroundColor=[UIColor colorWithRed:40/255.0 green:42/255.0 blue:45/255.0 alpha:0.5];
     //背景图
-    UIImageView *backView=[[UIImageView alloc]initWithFrame:CGRectMake(50, 85, SWEIDTH-100, SHEIGHT-300)];
+    UIImageView *backView=[[UIImageView alloc]initWithFrame:CGRectMake(50, 85, SWEIDTH-100, SWEIDTH-100)];
     backView.image=[UIImage imageNamed:@"scan.png"];
     [self.view addSubview:backView];
     

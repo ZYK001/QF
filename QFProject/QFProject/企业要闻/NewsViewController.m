@@ -87,6 +87,7 @@
     cell.title.text=obj.title;
     cell.abstract.text=obj.abstract;
     cell.url=obj.url;
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     [cell.headImage sd_setImageWithURL:[NSURL URLWithString:obj.image_url] placeholderImage:nil];
     
     return cell;

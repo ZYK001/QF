@@ -175,5 +175,17 @@
     [self.view addSubview:view];
 }
 
+//向当前页面添加背景图
+-(void)addBackGroundViewOnControllerView
+{
+    CGRect rect=self.view.frame;
+    rect.origin.y=300;
+    rect.size.height=SHEIGHT-364;
+    //添加背景图
+    UIImageView *backGroundView=[[UIImageView alloc]initWithFrame:rect];
+    backGroundView.image=[UIImage imageNamed:@"mkf"];
+    [self.view addSubview:backGroundView];
+}
+
 
 @end

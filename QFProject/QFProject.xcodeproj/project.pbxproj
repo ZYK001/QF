@@ -970,6 +970,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
@@ -1027,6 +1028,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
