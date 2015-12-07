@@ -78,7 +78,7 @@
     //赵英奎屏蔽
     if (!_tap) {
         UISwipeGestureRecognizer *tap = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        tap.direction=UISwipeGestureRecognizerDirectionRight|UISwipeGestureRecognizerDirectionLeft;
+        tap.direction=UISwipeGestureRecognizerDirectionLeft;
         tap.delegate = (id<UIGestureRecognizerDelegate>)self;
         [self.view addGestureRecognizer:tap];
         [tap setEnabled:NO];
