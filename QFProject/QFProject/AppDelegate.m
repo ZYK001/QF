@@ -41,12 +41,11 @@
     [self.rootNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条"] forBarMetrics:UIBarMetricsDefault];
     self.menuController.title=NSLocalizedString(@"工程名称", @"工程名称");
     self.window.rootViewController=self.rootNavigationController;
+
     [self.window makeKeyAndVisible];
     
     return YES;
 }
-
-
 
 //接受从服务器中请求下来的device token,并且将device token传送给极光服务器
 - (void)application:(UIApplication *)application

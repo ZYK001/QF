@@ -75,8 +75,10 @@
     [super viewDidLoad];
     [self setRootViewController:_root]; // reset root
     
+    //赵英奎屏蔽
     if (!_tap) {
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        UISwipeGestureRecognizer *tap = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        tap.direction=UISwipeGestureRecognizerDirectionRight|UISwipeGestureRecognizerDirectionLeft;
         tap.delegate = (id<UIGestureRecognizerDelegate>)self;
         [self.view addGestureRecognizer:tap];
         [tap setEnabled:NO];
