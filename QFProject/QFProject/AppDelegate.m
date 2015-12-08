@@ -32,7 +32,7 @@
     self.window.backgroundColor=[UIColor whiteColor];
     
     self.mainController=[[MainViewController alloc]init];
-    playerController=[[PlayerViewController alloc]init];
+    playerController=[PlayerViewController sharePlayerController];
     [self.mainController.view addSubview:playerController.view];
     self.leftController=[[ChildViewController alloc]init];
     self.menuController=[[DDMenuController alloc]initWithRootViewController:self.mainController];

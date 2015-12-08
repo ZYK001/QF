@@ -68,7 +68,7 @@
             //自定义视频播放器
         case 0:
         {
-            playerController=[[PlayerViewController alloc]init];
+            playerController=[PlayerViewController sharePlayerController];
             [mainController.view addSubview:playerController.view];
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {

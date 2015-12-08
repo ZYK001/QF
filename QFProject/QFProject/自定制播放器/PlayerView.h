@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayerView : UIView
+@interface PlayerView : UIImageView
+@property(strong,nonatomic)id delegate;
 
 @end

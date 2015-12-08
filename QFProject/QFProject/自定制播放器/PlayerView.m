@@ -7,7 +7,7 @@
 //
 
 #import "PlayerView.h"
-
+#import "PlayerViewController.h"
 @implementation PlayerView
 
 /*
@@ -23,6 +23,8 @@
     self=[super initWithFrame:frame];
     if (self) {
         
+        //self.image=[UIImage imageNamed:@"视频背景"];
+        self.userInteractionEnabled=YES;
         //添加播放器中的logo文字
         UILabel *playerName=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 30)];
         playerName.text=NSLocalizedString(@"工程名称", nil);
@@ -39,12 +41,19 @@
         UIImageView *player=[[UIImageView alloc]initWithFrame:CGRectMake(self.bounds.size.width/2-25, self.bounds.size.height/2-25, 50, 50)];
         player.image=[UIImage imageNamed:@"首页-播放"];
         [self addSubview:player];
-        
-        
-       
+        //播放按钮添加点击手势
+        UITapGestureRecognizer *playTapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playerButtonClickAction)];
+        player.userInteractionEnabled=YES;
+        [player addGestureRecognizer:playTapGesture];
         
     }
     return self;
 }
+-(void)playerButtonClickAction
+{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"playerButtonClickAction" object:nil];
+}
+
+
 
 @end

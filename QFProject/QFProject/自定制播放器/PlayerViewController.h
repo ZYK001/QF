@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 @interface PlayerViewController : BaseViewController
++(PlayerViewController *)sharePlayerController;
 
 @end
