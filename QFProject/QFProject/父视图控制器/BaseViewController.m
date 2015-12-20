@@ -14,9 +14,11 @@
 #import "QREncodeViewController.h"
 #import "NewsViewController.h"
 #import "PlayerViewController.h"
+#import "ResumeViewController.h"
 #import "AVCaptureDeviceController.h"
+#import "SDImageCache.h"
 
-@interface BaseViewController ()
+@interface BaseViewController ()<UIAlertViewDelegate>
 {
     //声明视频播放器
     PlayerViewController *playerController;
@@ -26,6 +28,8 @@
     QREncodeViewController *qrController;
     //声明二维码扫描
     AVCaptureDeviceController *captureController;
+    //声明断点续传页面
+    ResumeViewController *resumeController;
 }
 @end
 
@@ -118,15 +122,39 @@
             
         case 4:
         {
-            newsController= [[NewsViewController alloc]init];
-            [mainController.view addSubview:newsController.view];
-            //当点击表格每行时返回首页面
+            //获得系统中现有的缓存文件
+            NSUInteger intg = [[SDImageCache sharedImageCache] getSize];
+            //计算缓存大小
+            NSString * currentVolum = [NSString stringWithFormat:@"%@",[self fileSizeWithInterge:intg]];
+            //提示框提示清楚的大小
+            NSString *contString=[NSString stringWithFormat:@"已经帮您清除系统中缓%@存文件",currentVolum];
+            UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"清除缓存" message:contString delegate:self cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
+            [alert show];
+            //清除
+            [[SDImageCache sharedImageCache] clearDisk];
+            //返回到播放视频控制器
+            playerController=[PlayerViewController sharePlayerController];
+            [mainController.view addSubview:playerController.view];
             __block DDMenuController *menuVC=menuController;
             [menuController setRootController:mainController animated:YES animationFinished:^(NSString *Ok) {
-                menuVC.title=NSLocalizedString(@"新闻趣事",nil);
+                menuVC.title=NSLocalizedString(@"工程名称", nil);
             }];
+
             break;
+        }
+        case 5:
+        {
             
+            resumeController= [[ResumeViewController alloc]init];
+            [mainController.view addSubview:resumeController.view];
+            //当点击表格每行时返回首页面
+            __block DDMenuController *menuVC=menuController;
+            [menuController setRootController:resumeController animated:YES animationFinished:^(NSString *Ok) {
+                menuVC.title=NSLocalizedString(@"文件下载",nil);
+            }];
+
+            
+            break;
         }
             
         default:
@@ -185,6 +213,25 @@
     UIImageView *backGroundView=[[UIImageView alloc]initWithFrame:rect];
     backGroundView.image=[UIImage imageNamed:@"mkf"];
     [self.view addSubview:backGroundView];
+}
+
+
+
+//计算出缓存大小
+- (NSString *)fileSizeWithInterge:(NSInteger)size{
+    // 1k = 1024, 1m = 1024k
+    if (size < 1024) {// 小于1k
+        return [NSString stringWithFormat:@"%ldB",(long)size];
+    }else if (size < 1024 * 1024){// 小于1m
+        CGFloat aFloat = size/1024;
+        return [NSString stringWithFormat:@"%.0fK",aFloat];
+    }else if (size < 1024 * 1024 * 1024){// 小于1G
+        CGFloat aFloat = size/(1024 * 1024);
+        return [NSString stringWithFormat:@"%.1fM",aFloat];
+    }else{
+        CGFloat aFloat = size/(1024*1024*1024);
+        return [NSString stringWithFormat:@"%.1fG",aFloat];
+    }
 }
 
 

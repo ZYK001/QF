@@ -110,7 +110,8 @@
 
 -(void)playerButtonClickActionNotification
 {
-    NSURL *url=[NSURL URLWithString:@"http://video.izhangchu.com:280/zhangchu/promotion/Springconcessions.mp4"];
+    //NSURL *url=[NSURL URLWithString:@"http://video.izhangchu.com:280/zhangchu/promotion/Springconcessions.mp4"];
+    NSURL *url=[NSURL URLWithString:@"http://127.0.0.1:1234"];
     
     //创始视频播放器对象
     _movieController=[[MPMoviePlayerViewController alloc]initWithContentURL:url];

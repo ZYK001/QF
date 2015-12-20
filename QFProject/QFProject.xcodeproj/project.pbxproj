@@ -37,6 +37,9 @@
 		B4688BA31C0FECDD0030BD20 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B4688BA21C0FECDD0030BD20 /* News.m */; };
 		B46A229A1C111DA6000F65F9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A22991C111DA6000F65F9 /* PlayerViewController.m */; };
 		B46A229D1C111DB5000F65F9 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A229C1C111DB5000F65F9 /* PlayerView.m */; };
+		B47F096C1C26A01600728E2C /* KKResume.m in Sources */ = {isa = PBXBuildFile; fileRef = B47F096B1C26A01600728E2C /* KKResume.m */; };
+		B47F09721C26A12C00728E2C /* ResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47F09701C26A12C00728E2C /* ResumeViewController.m */; };
+		B47F09731C26A12C00728E2C /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47F09711C26A12C00728E2C /* ResumeViewController.xib */; };
 		B49B80A11C15597C00D0FF0D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49B809D1C15585A00D0FF0D /* Info.plist */; };
 		B4A8F3D21C0D4A9900222CEF /* ChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8F3CB1C0D4A9900222CEF /* ChildView.m */; };
 		B4A8F3D31C0D4A9900222CEF /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8F3CD1C0D4A9900222CEF /* ChildViewController.m */; };
@@ -137,6 +140,11 @@
 		B46A22991C111DA6000F65F9 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		B46A229B1C111DB5000F65F9 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		B46A229C1C111DB5000F65F9 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		B47F096A1C26A01600728E2C /* KKResume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKResume.h; sourceTree = "<group>"; };
+		B47F096B1C26A01600728E2C /* KKResume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKResume.m; sourceTree = "<group>"; };
+		B47F096F1C26A12C00728E2C /* ResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeViewController.h; sourceTree = "<group>"; };
+		B47F09701C26A12C00728E2C /* ResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeViewController.m; sourceTree = "<group>"; };
+		B47F09711C26A12C00728E2C /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumeViewController.xib; sourceTree = "<group>"; };
 		B49B809F1C15595B00D0FF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		B49B80A01C15596C00D0FF0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		B4A8F3CA1C0D4A9900222CEF /* ChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildView.h; sourceTree = "<group>"; };
@@ -356,6 +364,7 @@
 		B42637BB1C06739400D1CDCD /* QFProject */ = {
 			isa = PBXGroup;
 			children = (
+				B47F096D1C26A10B00728E2C /* 文件续传下载 */,
 				B41291B61C1167EE00A401CC /* 数据库操作 */,
 				B46A22941C111D78000F65F9 /* 自定制播放器 */,
 				B4688B941C0FEC6C0030BD20 /* 企业要闻 */,
@@ -481,6 +490,24 @@
 			name = C;
 			sourceTree = "<group>";
 		};
+		B47F096D1C26A10B00728E2C /* 文件续传下载 */ = {
+			isa = PBXGroup;
+			children = (
+				B47F096E1C26A11800728E2C /* C */,
+			);
+			path = "文件续传下载";
+			sourceTree = "<group>";
+		};
+		B47F096E1C26A11800728E2C /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B47F096F1C26A12C00728E2C /* ResumeViewController.h */,
+				B47F09701C26A12C00728E2C /* ResumeViewController.m */,
+				B47F09711C26A12C00728E2C /* ResumeViewController.xib */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
 		B4A8F3C91C0D4A9900222CEF /* 工程首页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +589,8 @@
 		B4F1039D1C0BE299008E3728 /* 断点续传 */ = {
 			isa = PBXGroup;
 			children = (
+				B47F096A1C26A01600728E2C /* KKResume.h */,
+				B47F096B1C26A01600728E2C /* KKResume.m */,
 			);
 			name = "断点续传";
 			sourceTree = "<group>";
@@ -706,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42637CD1C06739400D1CDCD /* LaunchScreen.xib in Resources */,
+				B47F09731C26A12C00728E2C /* ResumeViewController.xib in Resources */,
 				B4CBBA5B1C155B7800B46F72 /* InfoPlist.strings in Resources */,
 				B4466F201C14892500E75CE8 /* Localizable.strings in Resources */,
 				B42637CA1C06739400D1CDCD /* Images.xcassets in Resources */,
@@ -778,6 +808,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47F096C1C26A01600728E2C /* KKResume.m in Sources */,
 				B41150341C0ED846007B564E /* qrencode.c in Sources */,
 				B41150351C0ED846007B564E /* qrinput.c in Sources */,
 				B41150331C0ED846007B564E /* QRCodeGenerator.m in Sources */,
@@ -795,6 +826,7 @@
 				B41291D31C14060D00A401CC /* NObjCell.m in Sources */,
 				B4A8F3D51C0D4A9900222CEF /* MainViewController.m in Sources */,
 				B4FFE5161C0B6BB400DD5E91 /* DDMenuController.m in Sources */,
+				B47F09721C26A12C00728E2C /* ResumeViewController.m in Sources */,
 				B41150361C0ED846007B564E /* qrspec.c in Sources */,
 				B4A8F3E51C0D4C0400222CEF /* BaseModel.m in Sources */,
 				B4A8F3E21C0D4BF600222CEF /* BaseView.m in Sources */,
@@ -1014,7 +1046,7 @@
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
-				VALID_ARCHS = "armv7 arm64 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -1072,7 +1104,7 @@
 				PROVISIONING_PROFILE = "e29d0c0a-b326-4adc-81a8-f34f49a117d0";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Libraries/lib $(SRCROOT)/QFProject/QFProjectPCHFile.pch $(SRCROOT)/**";
-				VALID_ARCHS = "armv7 arm64 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
